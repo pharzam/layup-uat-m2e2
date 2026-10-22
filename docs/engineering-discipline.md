@@ -63,7 +63,7 @@ its subject, and some still carry notes on what the team settles later:
 **2. Settle the `‹…›` markers.** These are the per-project values with no file
 of their own, and each waits for a decision of the team:
 
-- `‹test runner›` — how tests run for tally, which is Go with the standard library
+- `go test` — how tests run for tally, which is Go with the standard library
   only (the command and any rule, for example "no external test framework"); the
   per-level commands
   (`‹unit test command›`, `‹integration test command›`, …) are defined in
@@ -727,7 +727,7 @@ shape allows it. It is the default way of working, not an afterthought bolted on
 once the code already "works". A bug fix's test must fail against the old code and
 pass against the fix — otherwise it is not proof that the bug is gone.
 
-Tests run through `‹test runner›`.
+Tests run through `go test`.
 
 The full testing conventions — the levels, a pattern to write each kind, the
 security, scaling, and Definition-of-Done (DoD) checklists, and the traceability

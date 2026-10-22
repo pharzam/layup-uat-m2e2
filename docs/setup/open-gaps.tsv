@@ -1,0 +1,111 @@
+.githooks/README.md	‹lint›	the value of ‹lint› at .githooks/README.md:34
+.githooks/pre-commit	‹lint command, e.g. a formatter --check plus a linter›	the value of ‹lint command, e.g. a formatter --check plus a linter› at .githooks/pre-commit:119
+.githooks/pre-commit	‹your-linter›	the value of ‹your-linter› at .githooks/pre-commit:120
+.githooks/pre-commit	‹unit test command›	the value of ‹unit test command› at .githooks/pre-commit:124
+.githooks/pre-commit	‹integration test command›	the value of ‹integration test command› at .githooks/pre-commit:125
+.githooks/pre-commit	‹end-to-end test command›	the value of ‹end-to-end test command› at .githooks/pre-commit:126
+.githooks/pre-commit	‹security test command›	the value of ‹security test command› at .githooks/pre-commit:130
+.githooks/pre-commit	‹security scanner›	the value of ‹security scanner› at .githooks/pre-commit:131
+docs/ci/README.md	‹security scanner›	the value of ‹security scanner› at docs/ci/README.md:54
+docs/ci/README.md	‹owner›	the value of ‹owner› at docs/ci/README.md:105
+docs/ci/README.md	‹repo›	the value of ‹repo› at docs/ci/README.md:105
+docs/ci/README.md	‹default branch›	the value of ‹default branch› at docs/ci/README.md:105
+docs/ci/README.md	‹the setting under which a failing pipeline blocks the merge, and the command that sets it›	the value of ‹the setting under which a failing pipeline blocks the merge, and the command that sets it› at docs/ci/README.md:150
+docs/ci/README.md	‹the setting under which a failing pipeline blocks the merge›	the value of ‹the setting under which a failing pipeline blocks the merge› at docs/ci/README.md:207
+docs/ci/README.md	‹your linter/formatter›	the value of ‹your linter/formatter› at docs/ci/README.md:216
+docs/ci/github-actions-ci.yml	‹default branch, e.g. main›	the value of ‹default branch, e.g. main› at docs/ci/github-actions-ci.yml:20
+docs/ci/github-actions-ci.yml	‹your linter/formatter›	the value of ‹your linter/formatter› at docs/ci/github-actions-ci.yml:73
+docs/ci/github-actions-ci.yml	‹set up your toolchain here›	the value of ‹set up your toolchain here› at docs/ci/github-actions-ci.yml:77
+docs/ci/github-actions-ci.yml	‹lint command, e.g. a formatter --check plus a linter›	the value of ‹lint command, e.g. a formatter --check plus a linter› at docs/ci/github-actions-ci.yml:78
+docs/ci/github-actions-ci.yml	‹unit test command›	the value of ‹unit test command› at docs/ci/github-actions-ci.yml:89
+docs/ci/github-actions-ci.yml	‹integration test command›	the value of ‹integration test command› at docs/ci/github-actions-ci.yml:91
+docs/ci/github-actions-ci.yml	‹end-to-end test command›	the value of ‹end-to-end test command› at docs/ci/github-actions-ci.yml:93
+docs/ci/github-actions-ci.yml	‹test timeout›	the value of ‹test timeout› at docs/ci/github-actions-ci.yml:93
+docs/ci/github-actions-ci.yml	‹security scanner›	the value of ‹security scanner› at docs/ci/github-actions-ci.yml:96
+docs/ci/github-actions-ci.yml	‹security test command›	the value of ‹security test command› at docs/ci/github-actions-ci.yml:101
+docs/ci/gitlab-ci.yml	‹your toolchain image›	the value of ‹your toolchain image› at docs/ci/gitlab-ci.yml:61
+docs/ci/gitlab-ci.yml	‹lint command, e.g. a formatter --check plus a linter›	the value of ‹lint command, e.g. a formatter --check plus a linter› at docs/ci/gitlab-ci.yml:63
+docs/ci/gitlab-ci.yml	‹unit test command›	the value of ‹unit test command› at docs/ci/gitlab-ci.yml:71
+docs/ci/gitlab-ci.yml	‹integration test command›	the value of ‹integration test command› at docs/ci/gitlab-ci.yml:72
+docs/ci/gitlab-ci.yml	‹end-to-end test command›	the value of ‹end-to-end test command› at docs/ci/gitlab-ci.yml:73
+docs/ci/gitlab-ci.yml	‹test timeout›	the value of ‹test timeout› at docs/ci/gitlab-ci.yml:73
+docs/ci/gitlab-ci.yml	‹security scanner image›	the value of ‹security scanner image› at docs/ci/gitlab-ci.yml:77
+docs/ci/gitlab-ci.yml	‹security test command›	the value of ‹security test command› at docs/ci/gitlab-ci.yml:80
+docs/ci/gitlab-ci.yml	‹security scanner›	the value of ‹security scanner› at docs/ci/gitlab-ci.yml:81
+docs/engineering-discipline.md	‹unit test command›	the value of ‹unit test command› at docs/engineering-discipline.md:65
+docs/engineering-discipline.md	‹integration test command›	the value of ‹integration test command› at docs/engineering-discipline.md:65
+docs/engineering-discipline.md	‹evidence store›	the value of ‹evidence store› at docs/engineering-discipline.md:67
+docs/engineering-discipline.md	‹task-ID scheme›	the value of ‹task-ID scheme› at docs/engineering-discipline.md:69
+docs/engineering-discipline.md	‹worktree dir›	the value of ‹worktree dir› at docs/engineering-discipline.md:71
+docs/engineering-discipline.md	‹lint›	the value of ‹lint› at docs/engineering-discipline.md:85
+docs/engineering-discipline.md	‹end-to-end test command›	the value of ‹end-to-end test command› at docs/engineering-discipline.md:87
+docs/engineering-discipline.md	‹security scanner›	the value of ‹security scanner› at docs/engineering-discipline.md:88
+docs/engineering-discipline.md	‹your project treats as panel-worthy›	the value of ‹your project treats as panel-worthy› at docs/engineering-discipline.md:219
+docs/engineering-discipline.md	‹name your reasoning-tier models›	the value of ‹name your reasoning-tier models› at docs/engineering-discipline.md:232
+docs/engineering-discipline.md	‹name your execution-tier models›	the value of ‹name your execution-tier models› at docs/engineering-discipline.md:233
+docs/engineering-discipline.md	‹name the failure modes that hurt you most,   for example data leakage, race conditions, off-by-one, unhandled errors›	the value of ‹name the failure modes that hurt you most,   for example data leakage, race conditions, off-by-one, unhandled errors› at docs/engineering-discipline.md:278
+docs/engineering-discipline.md	‹task-ID›	the value of ‹task-ID› at docs/engineering-discipline.md:601
+docs/engineering-discipline.md	‹for example money in currency, time in hours, counts such as "about 996 times in 1,000" rather than a percentage of a percentage›	the value of ‹for example money in currency, time in hours, counts such as "about 996 times in 1,000" rather than a percentage of a percentage› at docs/engineering-discipline.md:651
+docs/engineering-discipline.md	‹security test command›	the value of ‹security test command› at docs/engineering-discipline.md:753
+docs/engineering-discipline.md	‹test timeout›	the value of ‹test timeout› at docs/engineering-discipline.md:754
+docs/engineering-discipline.md	‹test directory›	the value of ‹test directory› at docs/engineering-discipline.md:754
+docs/engineering-discipline.md	‹how the harness reports model, effort, tokens and elapsed time›	the value of ‹how the harness reports model, effort, tokens and elapsed time› at docs/engineering-discipline.md:972
+docs/engineering-discipline.md	‹the plan and its review›	the value of ‹the plan and its review› at docs/engineering-discipline.md:979
+docs/engineering-discipline.md	‹model›	the value of ‹model› at docs/engineering-discipline.md:979
+docs/engineering-discipline.md	‹effort›	the value of ‹effort› at docs/engineering-discipline.md:979
+docs/engineering-discipline.md	‹tokens›	the value of ‹tokens› at docs/engineering-discipline.md:979
+docs/engineering-discipline.md	‹wall-clock›	the value of ‹wall-clock› at docs/engineering-discipline.md:979
+docs/engineering-discipline.md	‹the decay review rounds›	the value of ‹the decay review rounds› at docs/engineering-discipline.md:980
+docs/engineering-discipline.md	‹writing the tests and the code›	the value of ‹writing the tests and the code› at docs/engineering-discipline.md:981
+docs/engineering-discipline.md	‹isolate, guardrails, docs, close-out›	the value of ‹isolate, guardrails, docs, close-out› at docs/engineering-discipline.md:982
+docs/engineering-discipline.md	‹model / `not applicable`›	the value of ‹model / `not applicable`› at docs/engineering-discipline.md:982
+docs/engineering-discipline.md	‹sum›	the value of ‹sum› at docs/engineering-discipline.md:983
+docs/issue-workflow.md	‹task-ID scheme›	the value of ‹task-ID scheme› at docs/issue-workflow.md:18
+docs/issue-workflow.md	‹require a PR before merge›	the value of ‹require a PR before merge› at docs/issue-workflow.md:239
+docs/issue-workflow.md	‹require the check before merge›	the value of ‹require the check before merge› at docs/issue-workflow.md:243
+docs/issue-workflow.md	‹add a coverage gate›	the value of ‹add a coverage gate› at docs/issue-workflow.md:244
+docs/prd/README.md	‹slug›	the value of ‹slug› at docs/prd/README.md:12
+docs/tasks/backlog.md	‹task-ID scheme›	the value of ‹task-ID scheme› at docs/tasks/backlog.md:16
+docs/tasks/backlog.md	‹State your exact scheme here — for example: "T-" plus four characters drawn from 0-9 a-z minus the ambiguous i l o u; before using an ID, confirm tasks/<id>.md does not already exist."›	the value of ‹State your exact scheme here — for example: "T-" plus four characters drawn from 0-9 a-z minus the ambiguous i l o u; before using an ID, confirm tasks/<id>.md does not already exist."› at docs/tasks/backlog.md:20
+docs/tasks/backlog.md	‹ID›	the value of ‹ID› at docs/tasks/backlog.md:36
+docs/tasks/backlog.md	‹one-sentence summary›	the value of ‹one-sentence summary› at docs/tasks/backlog.md:36
+docs/tasks/backlog.md	‹ADR or doc link›	the value of ‹ADR or doc link› at docs/tasks/backlog.md:36
+docs/tasks/backlog.md	‹id›	the value of ‹id› at docs/tasks/backlog.md:36
+docs/tasks/completed.md	‹ID›	the value of ‹ID› at docs/tasks/completed.md:70
+docs/tasks/completed.md	‹one-sentence summary of what the task found or delivered›	the value of ‹one-sentence summary of what the task found or delivered› at docs/tasks/completed.md:70
+docs/tasks/completed.md	‹link›	the value of ‹link› at docs/tasks/completed.md:70
+docs/tasks/completed.md	‹id›	the value of ‹id› at docs/tasks/completed.md:70
+docs/tests/README.md	‹unit test command›	the value of ‹unit test command› at docs/tests/README.md:23
+docs/tests/README.md	‹integration test command›	the value of ‹integration test command› at docs/tests/README.md:23
+docs/tests/README.md	‹security scanner›	the value of ‹security scanner› at docs/tests/README.md:27
+docs/tests/dod-checklist.md	‹every requirement has a test›	the value of ‹every requirement has a test› at docs/tests/dod-checklist.md:62
+docs/tests/dod-checklist.md	‹unit \| integration›	the value of ‹unit \| integration› at docs/tests/dod-checklist.md:62
+docs/tests/dod-checklist.md	‹a REQ/NFR row in the traceability table›	the value of ‹a REQ/NFR row in the traceability table› at docs/tests/dod-checklist.md:62
+docs/tests/dod-checklist.md	‹✓ / ✗›	the value of ‹✓ / ✗› at docs/tests/dod-checklist.md:62
+docs/tests/dod-checklist.md	‹every user-facing path has a test›	the value of ‹every user-facing path has a test› at docs/tests/dod-checklist.md:63
+docs/tests/dod-checklist.md	‹e2e›	the value of ‹e2e› at docs/tests/dod-checklist.md:63
+docs/tests/dod-checklist.md	‹an E2E row per scenario›	the value of ‹an E2E row per scenario› at docs/tests/dod-checklist.md:63
+docs/tests/dod-checklist.md	‹a delivered feature is signed off by a person›	the value of ‹a delivered feature is signed off by a person› at docs/tests/dod-checklist.md:64
+docs/tests/dod-checklist.md	‹uat›	the value of ‹uat› at docs/tests/dod-checklist.md:64
+docs/tests/dod-checklist.md	‹a UAT row, human-checked›	the value of ‹a UAT row, human-checked› at docs/tests/dod-checklist.md:64
+docs/tests/dod-checklist.md	‹a bug fix has a test that fails on the old code›	the value of ‹a bug fix has a test that fails on the old code› at docs/tests/dod-checklist.md:65
+docs/tests/dod-checklist.md	‹a row citing the bug's task ID›	the value of ‹a row citing the bug's task ID› at docs/tests/dod-checklist.md:65
+docs/tests/dod-checklist.md	‹a known pitfall from guardrails.md is defended against›	the value of ‹a known pitfall from guardrails.md is defended against› at docs/tests/dod-checklist.md:66
+docs/tests/dod-checklist.md	‹unit \| integration \| e2e›	the value of ‹unit \| integration \| e2e› at docs/tests/dod-checklist.md:66
+docs/tests/dod-checklist.md	‹a row with a Guardrail cell filled in›	the value of ‹a row with a Guardrail cell filled in› at docs/tests/dod-checklist.md:66
+docs/tests/dod-checklist.md	‹the review round citing commit, reviewer, lens and verdict›	the value of ‹the review round citing commit, reviewer, lens and verdict› at docs/tests/dod-checklist.md:67
+docs/tests/example-fact-to-test.md	‹unit test > command›	the value of ‹unit test > command› at docs/tests/example-fact-to-test.md:17
+docs/tests/example-fact-to-test.md	‹unit test command›	the value of ‹unit test command› at docs/tests/example-fact-to-test.md:70
+docs/tests/example-fact-to-test.md	‹test directory›	the value of ‹test directory› at docs/tests/example-fact-to-test.md:79
+docs/tests/scaling-checklist.md	‹test timeout›	the value of ‹test timeout› at docs/tests/scaling-checklist.md:10
+docs/tests/security-checklist.md	‹security scanner›	the value of ‹security scanner› at docs/tests/security-checklist.md:9
+docs/tests/security-checklist.md	‹security test command›	the value of ‹security test command› at docs/tests/security-checklist.md:10
+docs/tests/test-levels.md	‹unit test command›	the value of ‹unit test command› at docs/tests/test-levels.md:52
+docs/tests/test-levels.md	‹integration test command›	the value of ‹integration test command› at docs/tests/test-levels.md:64
+docs/tests/test-levels.md	‹end-to-end test command›	the value of ‹end-to-end test command› at docs/tests/test-levels.md:76
+docs/tests/test-levels.md	‹test timeout›	the value of ‹test timeout› at docs/tests/test-levels.md:77
+docs/tests/test-levels.md	‹security test command›	the value of ‹security test command› at docs/tests/test-levels.md:117
+docs/tests/test-levels.md	‹security scanner›	the value of ‹security scanner› at docs/tests/test-levels.md:119
+docs/tests/test-levels.md	‹test directory›	the value of ‹test directory› at docs/tests/test-levels.md:133
+tests/README.md	‹test directory›	the value of ‹test directory› at tests/README.md:7
+tests/README.md	‹test > directory›	the value of ‹test > directory› at tests/README.md:34

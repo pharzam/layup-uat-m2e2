@@ -63,7 +63,7 @@ fresh baseline (no PRDs yet). It is wired into the
 the PRD format's shape, change the linter in the same change** — the two must
 agree. Its self-tests live in [`tests/`](tests/) (sample good and bad PRDs, not
 example content to complete). tally, on Go, may instead port these
-checks to its `‹test runner›`.
+checks to its `go test`.
 
 ## Index
 
