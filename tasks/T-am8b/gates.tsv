@@ -1,0 +1,6 @@
+head	kind	base	state	result	reason
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	static	d03c8650303fbdff49986ef5478ed53d11219964	active	clear	no product path
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	layout	d03c8650303fbdff49986ef5478ed53d11219964	pending	clear	pending: no product path
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	boundary	d03c8650303fbdff49986ef5478ed53d11219964	pending	clear	pending: no product path
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	contract	d03c8650303fbdff49986ef5478ed53d11219964	pending	clear	pending: no product path
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	test	d03c8650303fbdff49986ef5478ed53d11219964	active	clear	no product path
