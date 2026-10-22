@@ -1,0 +1,6 @@
+kind	n	value	sha256	reason
+status	1	completed	—	PRD-0001, docs/spec/tally.md and docs/tasks/T-yzst.md written and committed; prd-lint flags only the MoSCoW and Phase cells left empty for the bet
+artifact	1	docs/tasks/T-yzst.md	7882269757a4e0f15f2a3889003da2ced0e40d5f4a9108adb6a58c17ca8d2cda	—
+artifact	2	docs/prd/PRD-0001-tally.md	6676e223ad3f6ddaa38ecaf62847beebc1ac9265d34a42ec3c011891d2c12123	—
+artifact	3	docs/prd/README.md	b3ebcde44ebcf9e05eef3548a22d14941b6c7487b26aa515ff2725adcca97158	—
+artifact	4	docs/spec/tally.md	08fb04d5b059c2643e8c96c9fb8863acdad49d2a5db5e921f1764a831d1e0332	—
