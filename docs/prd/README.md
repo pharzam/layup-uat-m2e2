@@ -7,24 +7,24 @@ it cites the fact it derives from. Layer 1 (the facts) is immutable evidence;
 Layer 2 (the PRD) is where interpretation is allowed — so a reader can always trace
 a requirement back to the customer's exact words.
 
-> **How to adapt this directory.** Keep [`template.md`](template.md), this README,
-> and [`prd-lint.sh`](prd-lint.sh) — they are the reusable scaffold. Write your
-> real PRDs beside them as `PRD-NNNN-‹slug›.md`. A project with no external
-> customer, or one too small to need requirement tracking, can delete this whole
-> directory (and the `prd-lint` steps in the [hooks](../../.githooks/pre-commit)
-> and [CI](../ci/)); nothing else depends on it. Delete this note once your first
-> PRD is in.
+> **How to tailor this directory.** Keep [`template.md`](template.md), this README,
+> and [`prd-lint.sh`](prd-lint.sh) — they are the reusable scaffold. Write tally's
+> real PRDs beside them as `PRD-NNNN-‹slug›.md`. tally has an idea owner and
+> recorded facts, so it keeps this directory; a project with no external customer
+> could drop it (and the `prd-lint` steps in the [hooks](../../.githooks/pre-commit)
+> and [CI](../ci/)), since nothing else depends on it. Remove this note once tally's
+> first PRD is in.
 
 ## Adding a new PRD
 
 1. Copy [`template.md`](template.md) to `PRD-NNNN-short-slug.md`, using the next
    sequential number.
-2. Fill in every section. **Cite a fact** (`F-NNNN` or `F-NNNN#n`) for every
+2. Write every section. **Cite a fact** (`F-NNNN` or `F-NNNN#n`) for every
    requirement — see the convention below.
 3. Give each requirement a stable ID (`REQ-NNN` functional, `NFR-NNN`
    non-functional), assigned once and never reused or renumbered.
 4. Add a row to the [Index](#index) table below.
-5. If this PRD **replaces** an earlier one, set the old PRD's Status to
+5. If this PRD **supersedes** an earlier one, set the old PRD's Status to
    `Superseded by PRD-NNNN` and link the new one.
 
 ## The convention
@@ -57,12 +57,12 @@ conventions above — filename shape, at least one requirement, unique `REQ`/`NF
 IDs, a resolvable cited fact per requirement, an allowed MoSCoW value, the
 `Won't ⇒ Phase —` rule, and a §12 matrix whose ID set equals the requirement set. It reads only Markdown, so
 `sh docs/prd/prd-lint.sh` runs anywhere with no toolchain, and it is green on a
-fresh kit (no PRDs yet). It is wired into the
+fresh baseline (no PRDs yet). It is wired into the
 [`pre-commit` hook](../engineering-discipline.md#git-hooks) and
-[CI](../engineering-discipline.md#continuous-integration-optional). **If you change
-this template's shape, change the linter in the same change** — the two must
+[CI](../engineering-discipline.md#continuous-integration-opt-in). **If you change
+the PRD format's shape, change the linter in the same change** — the two must
 agree. Its self-tests live in [`tests/`](tests/) (sample good and bad PRDs, not
-example content to fill in). A project on a specific stack may instead port these
+example content to complete). tally, on Go, may instead port these
 checks to its `‹test runner›`.
 
 ## Index

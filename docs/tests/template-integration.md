@@ -5,9 +5,9 @@ a real seam**, per the
 [integration level](test-levels.md#2-integration-tests). This is the pattern to
 copy for each new one.
 
-> **How to adapt this file.** Copy [the skeleton](#fill-in-skeleton) below for
-> every new integration test, replacing each `‹…›` with the real names, setup,
-> and command. Keep the pattern's rules; delete this note once your first real
+> **How to tailor this file.** Copy [the skeleton](#skeleton-to-copy) below for
+> every new integration test, swapping each `‹…›` for the real names, setup,
+> and command. Keep the pattern's rules; remove this note once your first real
 > test is written from it.
 
 ## In plain terms
@@ -37,7 +37,7 @@ more fragile than a unit test, and runs after the unit level. It isolates its
 own external state — a fresh fixture per run — so runs do not interfere with
 each other or leave residue behind.
 
-## Fill-in skeleton
+## Skeleton to copy
 
 ```text
 test ‹name: the workflow, in plain words, e.g. "saves a record and reads it back"›:

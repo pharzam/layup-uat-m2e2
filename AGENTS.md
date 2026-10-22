@@ -1,7 +1,7 @@
 # AGENTS.md
 
-Agent context for **Armature**, the engineering-discipline kit. Read this before
-you change anything in this repository.
+Agent context for **tally**, the small Go command that counts the lines, words and
+characters of text files. Read this before you change anything in this repository.
 
 This file is a startup index and summary of how we work here. Where it disagrees
 with a document it points to or summarises, **the document wins** — and the
@@ -10,14 +10,22 @@ disagreement is a defect to fix in the same change
 
 ## What this repository is
 
-A domain-free **template**, not a product application. Armature ships the "how we
-work" — a quality gate, guardrails, decision records, a glossary, a
-facts-and-requirements convention, a test section and a task backlog — for an
-adopter to copy onto its own domain. It holds no product code and no product test
-suite, so there is nothing here to build, and no toolchain to install.
+The repository `pharzam/layup-uat-m2e2` holds tally: a command, written in Go with
+the standard library only and built with the Go toolchain, that prints the number of
+lines, words and characters of each file it is given, and a total. Its engineering
+discipline — a quality gate, guardrails, decision records, a glossary, a
+facts-and-requirements convention, a test section and a task backlog — was copied
+once from Armature, at the commit pinned in
+[`docs/setup/armature.pin`](docs/setup/armature.pin).
 
-Two things catch agents out: the `‹…›` markers are deliberate, and the root
-[`tests/`](tests/) directory is empty on purpose — it is the adopter's drop-in.
+No Go code exists yet. The facts are in [`docs/facts/`](docs/facts/): the idea
+owner's [problem statement](docs/facts/problem-statement-brief.md) and their
+[answers](docs/facts/F-0001-setup-answers.md). Every requirement and every expected
+output comes from them; never guess a behaviour they do not state — ask on the issue.
+
+Two things catch agents out: some documents still carry angle-quote markers for
+values the team has not settled, and they are deliberate; and the root
+[`tests/`](tests/) directory is empty until the Go code exists.
 
 ## How these instructions rank
 
@@ -31,12 +39,12 @@ between any two of them stops work until a decision note or an
 
 ## Start here
 
-Read [`docs/engineering-discipline.md`](docs/engineering-discipline.md) for how we
-work, then [`docs/issue-workflow.md`](docs/issue-workflow.md) for the ticket rules
-that gate assumes.
-[`docs/onboarding-for-engineers.md`](docs/onboarding-for-engineers.md) is the
-human first door. Which document owns which class of rule is the table under
-Sources of truth, written once.
+Read [`docs/onboarding-for-engineers.md`](docs/onboarding-for-engineers.md) for what
+tally is and its vocabulary, then
+[`docs/engineering-discipline.md`](docs/engineering-discipline.md) for how we work,
+then [`docs/issue-workflow.md`](docs/issue-workflow.md) for the ticket rules that
+gate assumes. Which document owns which class of rule is the table under Sources of
+truth, written once.
 
 ## The quality gate
 
@@ -96,19 +104,21 @@ git diff --check
 
 [`docs/ci/pr-link-lint.sh`](docs/ci/pr-link-lint.sh) and
 [`docs/ci/review-record-lint.sh`](docs/ci/review-record-lint.sh) read forge
-artifacts, so they run in CI only and have no local run. Armature has no product test suite and no
-product toolchain: never invent a build, lint or test command for it.
+artifacts, so they run in CI only and have no local run. The Go build, lint and test
+commands are not settled yet: until [`docs/tests/test-levels.md`](docs/tests/test-levels.md)
+names them, never invent one, and never claim a Go check passed that you did not run.
 
 ## Branches, worktrees, commits, and pull requests
 
-Work in a per-task git worktree under `‹worktree dir›/<task>`, branched off
-`origin/main`, never in the operator's own checkout. Commit at each logical step,
-with a subject that follows Conventional Commits — `<type>: <ID> <description>`
-when it carries a task. Rebase onto the latest `origin/main` and land with a plain
-merge; **never squash** — but a branch already under a frozen-head verdict merges
-`origin/main` in instead, so the reviewed SHA survives. The pull-request body
-links its issue with `Closes #N`,
-or `Refs #N` when it does not close it.
+Work in a per-task git worktree under the team's worktree directory, one per task,
+branched off `origin/main`, never in the operator's own checkout. Commit at each
+logical step, with a subject that follows Conventional Commits —
+`<type>: <ID> <description>` when it carries a task. Rebase onto the latest
+`origin/main` and land with a plain merge; **never squash** — but a branch already
+under a frozen-head verdict merges `origin/main` in instead, so the reviewed SHA
+survives. The pull-request body links its issue with `Closes #N`, or `Refs #N` when
+it does not close it. The branch `layup-records` holds the delivery's records and
+never takes product changes.
 
 ## The task index
 
@@ -118,12 +128,13 @@ ones. Any detail belongs in that task's own file, never in either index. The sam
 pull request that lands the work records the line in the completed log, moving it
 from the backlog where the task had one.
 
-## Placeholders and adopter values
+## Placeholders and unsettled values
 
-Every `‹…›` marker is a value only the adopter can supply — the test runner, the
-evidence store, the task-ID scheme, the worktree directory. Never replace one with
-a guess, never invent an adopter's command, path or number, and never delete a
-marker to make a check pass. Search for `‹` to find every one of them.
+Every angle-quote marker in the documents is a value only the team can supply — the
+test runner, the evidence store, the task-ID scheme, the worktree directory, the Go
+commands of each test level. Never swap one for a guess, never invent a command,
+path or number for tally, and never delete a marker to make a check pass. Search
+the tree for the opening angle quote to find every one of them.
 
 ## Safety limits
 
@@ -138,8 +149,9 @@ code that will do the work before it runs. The full rule is
 Record the plan, the selected option, the rejected alternatives, the tradeoffs and
 the evidence on the issue — that is where a fresh context picks the work up. Ask
 another operator on the issue thread, with a severity and an expected response
-time, never directly. An architecturally significant decision becomes an
-[ADR](docs/adr/).
+time, never directly. A question about tally's behaviour that the facts do not
+answer goes to the idea owner the same way. An architecturally significant decision
+becomes an [ADR](docs/adr/).
 
 ## Sources of truth
 
@@ -149,7 +161,7 @@ time, never directly. An architecturally significant decision becomes an
 | [`docs/issue-workflow.md`](docs/issue-workflow.md) | The numbered rules themselves, and the honest table of what a mechanism backs today. |
 | [`docs/guardrails.md`](docs/guardrails.md) | Known pitfalls, pre-registered pass and fail rules, and how a result is validated. |
 | [`docs/glossary.md`](docs/glossary.md) | The shared vocabulary, and the rule that every abbreviation earns an entry. |
-| [`docs/adr/`](docs/adr/) | Architecture decisions that constitute a project, with the context and the consequences of each one. This repository's own past governance decisions are archived under `docs/decisions/`, which an adopter deletes. |
+| [`docs/adr/`](docs/adr/) | Architecture decisions that constitute the project, with the context and the consequences of each one. |
 | [`docs/tests/`](docs/tests/) | The test levels, a pattern for each, and the Definition-of-Done coverage checklist. |
-| [`docs/facts/`](docs/facts/) and [`docs/prd/`](docs/prd/) | Customer facts kept as evidence, and the requirements derived from them. |
+| [`docs/facts/`](docs/facts/) and [`docs/prd/`](docs/prd/) | The idea owner's facts kept as evidence, and the requirements derived from them. |
 | [`.githooks/`](.githooks/) and [`docs/ci/`](docs/ci/) | What the gate enforces locally, and what CI enforces as the authority. |

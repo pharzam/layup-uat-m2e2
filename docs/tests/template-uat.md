@@ -7,10 +7,10 @@ that the delivered behaviour is what a real person actually asked for; a human
 reads the plain-language steps and signs off, rather than a command asserting a
 result.
 
-> **How to adapt this file.** Copy the [skeleton](#fill-in-skeleton) for each
+> **How to tailor this file.** Copy the [skeleton](#skeleton-to-copy) for each
 > user-facing scenario that needs a human sign-off, usually the same scenario an
-> [E2E test](template-e2e.md) already automates. Replace every `‹…›`
-> placeholder. Delete this note from your own copy once the first real scenario
+> [E2E test](template-e2e.md) already automates. Give every `‹…›`
+> placeholder its real value. Remove this note from your own copy once the first real scenario
 > is in.
 
 ## In plain terms
@@ -38,7 +38,7 @@ result.
   liking the result is not enough — write down who accepted it and when, so the
   sign-off is a fact in the repo, not a memory.
 
-## Fill-in skeleton
+## Skeleton to copy
 
 ```text
 Scenario: ‹title›

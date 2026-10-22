@@ -1,13 +1,13 @@
-# Forge templates (optional, inert)
+# Forge issue and PR forms (opt-in, inert)
 
 Issue and pull/merge-request templates that embody the [issue-first
 workflow](../issue-workflow.md) — single-goal scope (R11), the duplicate check
 (R2), solution selection (R3), and the action/why/tradeoff comment (R7).
 
 **These are inert here on purpose.** An issue or PR template changes the live forge
-interface the moment it lands, so the kit does not activate one for you — it stays
-forge-free. You opt in by copying the set your forge uses into the place it
-expects, then filling each `‹…›` marker.
+interface the moment it lands, so the baseline does not activate one for you — it stays
+forge-free. tally lives on GitHub, so the team opts in by copying the GitHub set
+into the place it expects, then giving each `‹…›` marker its real value.
 
 ## Activate
 
@@ -29,8 +29,8 @@ cp docs/templates/gitlab/merge_request_templates/Default.md .gitlab/merge_reques
 
 The GitHub issue template carries a small metadata header (`name`, `about`,
 `labels`) the forge reads; the GitLab files are plain Markdown. Delete a template
-your project does not use.
+this project does not use.
 
-> Not to be confused with the kit's per-record templates — [`adr/template.md`](../adr/template.md),
+> Not to be confused with the baseline's per-record templates — [`adr/template.md`](../adr/template.md),
 > [`facts/template.md`](../facts/template.md), [`prd/template.md`](../prd/template.md) —
 > which are copied *inside* their own directories, not into a forge path.

@@ -4,9 +4,9 @@ A unit test proves that **one component behaves correctly in isolation**, per
 the [unit level](test-levels.md#1-unit-tests). This is the pattern to copy for
 each new one.
 
-> **How to adapt this file.** Copy [the skeleton](#fill-in-skeleton) below for
-> every new unit test, replacing each `‹…›` with the real name, code, and
-> command. Keep the pattern's rules; delete this note once your first real test
+> **How to tailor this file.** Copy [the skeleton](#skeleton-to-copy) below for
+> every new unit test, swapping each `‹…›` for the real name, code, and
+> command. Keep the pattern's rules; remove this note once your first real test
 > is written from it.
 
 ## In plain terms
@@ -31,7 +31,7 @@ A unit test does not depend on another test's state or order. Where a real
 collaborator is genuinely needed, that is an
 [integration test](template-integration.md), not a unit test.
 
-## Fill-in skeleton
+## Skeleton to copy
 
 ```text
 test ‹name: the behaviour, in plain words, e.g. "rejects a negative amount"›:

@@ -4,9 +4,9 @@ A generic pattern for writing an end-to-end test — the level defined in
 [`test-levels.md`](test-levels.md#3-end-to-end-e2e-tests). Copy the skeleton
 below for each new user-facing scenario.
 
-> **How to adapt this file.** Replace every `‹…›` placeholder with your stack's
+> **How to tailor this file.** Swap every `‹…›` placeholder for the Go toolchain's
 > real command once, in [`test-levels.md`](test-levels.md); this file inherits
-> them. Copy the [skeleton](#fill-in-skeleton) for each new scenario and delete
+> them. Copy the [skeleton](#skeleton-to-copy) for each new scenario and delete
 > this note from your own copy once the first real test is in.
 
 ## In plain terms
@@ -34,7 +34,7 @@ below for each new user-facing scenario.
   affordable; a tiny smoke subset may run in the local hook to prove the wiring
   still works, per [`test-levels.md`](test-levels.md#3-end-to-end-e2e-tests).
 
-## Fill-in skeleton
+## Skeleton to copy
 
 ```text
 Scenario: ‹the one user-facing path this test proves›
