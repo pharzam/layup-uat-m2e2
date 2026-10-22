@@ -7,14 +7,6 @@ it cites the fact it derives from. Layer 1 (the facts) is immutable evidence;
 Layer 2 (the PRD) is where interpretation is allowed — so a reader can always trace
 a requirement back to the customer's exact words.
 
-> **How to tailor this directory.** Keep [`template.md`](template.md), this README,
-> and [`prd-lint.sh`](prd-lint.sh) — they are the reusable scaffold. Write tally's
-> real PRDs beside them as `PRD-NNNN-‹slug›.md`. tally has an idea owner and
-> recorded facts, so it keeps this directory; a project with no external customer
-> could drop it (and the `prd-lint` steps in the [hooks](../../.githooks/pre-commit)
-> and [CI](../ci/)), since nothing else depends on it. Remove this note once tally's
-> first PRD is in.
-
 ## Adding a new PRD
 
 1. Copy [`template.md`](template.md) to `PRD-NNNN-short-slug.md`, using the next
@@ -57,7 +49,9 @@ conventions above — filename shape, at least one requirement, unique `REQ`/`NF
 IDs, a resolvable cited fact per requirement, an allowed MoSCoW value, the
 `Won't ⇒ Phase —` rule, and a §12 matrix whose ID set equals the requirement set. It reads only Markdown, so
 `sh docs/prd/prd-lint.sh` runs anywhere with no toolchain, and it is green on a
-fresh baseline (no PRDs yet). It is wired into the
+fresh baseline (no PRDs yet). [PRD-0001](PRD-0001-tally.md) keeps its MoSCoW and
+Phase cells empty until the first bet fills them, so until then the linter fails on
+those two checks only — see the [guardrail](../guardrails.md#gate-pitfalls-project-wide--keep-these). It is wired into the
 [`pre-commit` hook](../engineering-discipline.md#git-hooks) and
 [CI](../engineering-discipline.md#continuous-integration-opt-in). **If you change
 the PRD format's shape, change the linter in the same change** — the two must
@@ -69,6 +63,7 @@ checks to its `go test`.
 
 | PRD | Title | Status |
 | --- | ----- | ------ |
+| [PRD-0001](PRD-0001-tally.md) | tally, the command that counts lines, words and characters | Draft |
 
 <!-- Add one row per PRD as you write it (newest at the bottom), for example:
      | PRD-0001 | Short title | Accepted | -->

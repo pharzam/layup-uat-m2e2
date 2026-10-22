@@ -6,8 +6,10 @@ for the full rationale.
 
 ## What belongs in this directory
 
-`docs/adr/` is tally's **living constitution**: it holds only records that
-constitute *a project*, generic enough to carry onto any domain. Two
+`docs/adr/` is tally's **living constitution**. It holds two kinds of record:
+records that constitute *a project*, generic enough to carry onto any domain, and,
+since ADR-0010, the architecture decisions of the product itself, each of which says
+that it is a decision of the product. Two
 rules keep it that way, and both are **written rules** — no linter enforces them
 (`link-lint` checks that a link resolves, not which way it points; `adr-lint`
 reads only this directory), so the [plan review](../issue-workflow.md#r12--slice-and-prioritize)
@@ -30,7 +32,7 @@ are their enforcement:
    survives the deletion.)
 
 **Numbering.** `docs/adr/` is the single living ADR sequence, numbered
-contiguously from `0001`, and it grows — the next constitutional ADR is `0009`. A
+contiguously from `0001`, and it grows — the next ADR is `0016`. A
 bare "ADR-NNNN" means this directory's sequence. The archive under `docs/decisions/`
 has its **own namespace**: a prefixed, zero-based sequence `D-0000`–`D-0007` that
 shares no number with this one and is cited **by its `D-NNNN` identifier** — named
@@ -136,6 +138,12 @@ record by number here, and let the index table below do the linking.
 | [0007](0007-record-task-resource-use.md)        | Record each task's resource use | Accepted |
 | [0008](0008-require-one-reading-in-decision-driving-text.md) | Require one reading in decision-driving text | Accepted |
 | [0009](0009-pin-the-baseline.md) | Pin the baseline | Accepted |
+| [0010](0010-record-product-architecture-decisions.md) | Record the product's architecture decisions in this directory | Accepted |
+| [0011](0011-build-with-go-build-only.md) | Build tally with go build only | Accepted |
+| [0012](0012-count-with-three-functions-over-a-teed-reader.md) | Count with three functions over a teed reader | Accepted |
+| [0013](0013-parse-flags-by-hand.md) | Parse the flags by hand | Accepted |
+| [0014](0014-stream-through-a-fixed-buffer.md) | Stream each file through a fixed buffer | Accepted |
+| [0015](0015-validate-utf8-in-the-stream.md) | Validate UTF-8 in the stream and print the row after the end of the file | Accepted |
 
 <!-- Add one row per ADR as you write them. Keep the newest at the bottom. -->
 
