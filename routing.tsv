@@ -1,0 +1,13 @@
+role	tier	position	harness	model
+developer	execution	1	claude	claude-sonnet-5-5
+developer	execution	2	devin	swe-2-high
+systems-architect	reasoning	1	claude	claude-opus-5-5
+systems-architect	reasoning	2	devin	swe-2-high
+product-owner	reasoning	1	claude	claude-opus-5-5
+product-owner	reasoning	2	devin	swe-2-high
+software-engineer	reasoning	1	claude	claude-opus-5-5
+software-developer	reasoning	1	claude	claude-opus-5-5
+software-developer	execution	1	claude	claude-sonnet-5-5
+domain-expert	reasoning	1	claude	claude-opus-5-5
+qa-engineer	reasoning	1	codex	gpt-6.1-sol
+qa-engineer	reasoning	2	devin	swe-2-high
