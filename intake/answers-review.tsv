@@ -1,0 +1,170 @@
+question	state	reason	session
+Q-001	closed	Fixes the order: lines, then words, then characters, whatever the order of the flags.	S-c8be63ce
+Q-002	closed	Answers all three parts: -lw is accepted as -l -w, - is an ordinary file name, and an unknown flag gives a usage message on standard error, no counts and exit code 2.	S-c8be63ce
+Q-003	closed	States that other files are still counted, that the invalid file gets no row and adds nothing to the total, and that the check runs during the read, so rows already printed stay.	S-c8be63ce
+Q-004	closed	The standard-input row carries no name and ends after the counts.	S-c8be63ce
+Q-005	closed	An empty line counts as one line, an empty file counts 0/0/0, and a carriage return is part of the line and counts as a character.	S-c8be63ce
+Q-006	closed	The line feed and a leading byte order mark each count as one character, and the BOM is not stripped.	S-c8be63ce
+Q-007	closed	Defines "not text" as exactly "not valid UTF-8" and puts a named directory under rule 5, with a message, no row and exit code 1.	S-c8be63ce
+Q-008	closed	Fixes the reference machine (any machine with 4 cores and an SSD), a warm OS cache, 10 MiB of ASCII text with lines of about 80 characters, and whole-process elapsed time including start-up.	S-c8be63ce
+Q-009	closed	Makes the limit the peak heap and defines the measurement: sample runtime.ReadMemStats HeapAlloc every 10 ms and take the maximum.	S-c8be63ce
+Q-010	closed	Requires a separate package count in the same module, holding the counting functions over a reader, and limits the 90 percent target to that package.	S-c8be63ce
+Q-011	closed	B = 50.00 is a decimal and is below U = 100.00.	S-c8be63ce
+Q-012	closed	U = 100.00 is a decimal and is above B = 50.00.	S-c8be63ce
+Q-013	closed	Gives a decimal wall-clock appetite of 48.0 hours.	S-c8be63ce
+Q-014	closed	Gives four success criteria, separated by ";", none of which contains a ";", and each one traces to the statement and the clarified answers.	S-c8be63ce
+Q-015	closed	Names the stack go, which matches the statement's Go/standard-library stack.	S-c8be63ce
+Q-016	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-017	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-018	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-019	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-020	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-021	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-022	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-023	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-024	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-025	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-026	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-027	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-028	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-029	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-030	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-031	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-032	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-033	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-034	closed	Accepting is enough here: the stack is fixed as go (Q-015), so the toolchain setup follows from it.	S-c8be63ce
+Q-035	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-036	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-037	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-038	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-039	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-040	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-041	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-042	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-043	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-044	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-045	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-046	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-047	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-048	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-049	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-050	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-051	closed	Accepting is enough here: the quoted statement text names go test, which supplies the test runner.	S-c8be63ce
+Q-052	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-053	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-054	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-055	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-056	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-057	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-058	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-059	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-060	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-061	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-062	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-063	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-064	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-065	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-066	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-067	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-068	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-069	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-070	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-071	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-072	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-073	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-074	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-075	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-076	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-077	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-078	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-079	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-080	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-081	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-082	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-083	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-084	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-085	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-086	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-087	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-088	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-089	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-090	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-091	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-092	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-093	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-094	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-095	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-096	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-097	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-098	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-099	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-100	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-101	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-102	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-103	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-104	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-105	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-106	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-107	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-108	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-109	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-110	closed	Accepting is enough here: the statement's Purpose and Scope already give a plain-language description of the product.	S-c8be63ce
+Q-111	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-112	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-113	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-114	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-115	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-116	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-117	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-118	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-119	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-120	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-121	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-122	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-123	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-124	closed	Accepting is enough here: the quoted statement text names go test, which supplies the test runner.	S-c8be63ce
+Q-125	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-126	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-127	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-128	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-129	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-130	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-131	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-132	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-133	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-134	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-135	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-136	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-137	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-138	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-139	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-140	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-141	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-142	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-143	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-144	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-145	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-146	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-147	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-148	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-149	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-150	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-151	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-152	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-153	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-154	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-155	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-156	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-157	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-158	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-159	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-160	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-161	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-162	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-163	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-164	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-165	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-166	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-167	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-168	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
+Q-169	open	The answer "gap" gives no value for the placeholder; it only marks it as still missing, so the gap remains.	S-c8be63ce
