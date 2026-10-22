@@ -5,3 +5,4 @@ n	kind	attempt	session	base	sha	detail	time
 4	handoff	1	S-7b0b85b1	—	—	valid comment 6345823799-1	2026-10-22T16:28:28Z
 5	session	1	S-cbc711fa	—	—	—	2026-10-22T16:28:31Z
 6	result	1	S-cbc711fa	—	—	done	2026-10-22T16:29:42Z
+7	handoff	1	S-cbc711fa	—	—	valid comment 6345850877-1	2026-10-22T16:29:52Z
