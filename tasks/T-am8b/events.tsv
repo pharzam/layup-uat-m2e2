@@ -14,3 +14,4 @@ n	kind	attempt	session	base	sha	detail	time
 13	result	2	S-663a38fe	—	—	done	2026-10-22T18:03:47Z
 14	push	2	S-663a38fe	—	c17c28c8c9c3578056f960aa98ba907bfbd15fc7	task/T-am8b/2	2026-10-22T18:03:50Z
 15	bound	2	S-663a38fe	—	c17c28c8c9c3578056f960aa98ba907bfbd15fc7	task/T-am8b/2	2026-10-22T18:03:56Z
+16	handoff	2	S-663a38fe	—	—	valid	2026-10-22T18:04:01Z
