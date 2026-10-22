@@ -152,6 +152,7 @@ Consequences you will meet immediately, and which are not negotiable:
 | [`glossary.md`](glossary.md) | The shared vocabulary. Skim it; come back constantly. |
 | [`facts/`](facts/) | Facts collected from the idea owner, stored as-is as immutable evidence. Derived requirements cite them by `F-NNNN` ID. |
 | [`prd/`](prd/) | Product Requirements Documents, derived from the facts; each `REQ`/`NFR` cites an `F-NNNN` fact. |
+| [`spec/`](spec/) | The specification of tally: one section per `REQ`/`NFR` of the PRD, saying how the command and the package `count` behave. |
 | [`issue-workflow.md`](issue-workflow.md) | The issue-first rules (R1–R13): the ticket policy the gate assumes. |
 | [`tasks/backlog.md`](tasks/backlog.md) | What to work on next. |
 | [`tests/`](../tests/) | Where tally's product tests go once there is Go code. |
@@ -170,6 +171,8 @@ Consequences you will meet immediately, and which are not negotiable:
 
 The repository is set up: the discipline is in place, the problem statement and the
 idea owner's answers are recorded as facts, and the delivery has its success
-criteria (F-0001#15). No Go code and no PRD exist yet. The next step is to derive
-the requirements from the facts and write the first failing test for the package
-`count`.
+criteria (F-0001#15). The requirements are derived: [PRD-0001](prd/PRD-0001-tally.md)
+states them as REQ-001 to REQ-017 and NFR-018 to NFR-024, and
+[SPEC-0001](spec/SPEC-0001-tally.md) specifies each one; their MoSCoW priorities and
+phases are set at the first bet. No Go code exists yet. The next step is to write the
+first failing test for the package `count`, from the specification.
