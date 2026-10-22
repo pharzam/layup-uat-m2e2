@@ -10,3 +10,4 @@ n	kind	attempt	session	base	sha	detail	time
 9	result	1	S-06aeffc9	—	—	done	2026-10-22T16:33:17Z
 10	refused	1	S-06aeffc9	—	—	rule-path c844bf5e1782b4e70f954fc15330f9b2b0e18023599eef8fcf6ca4098e359833	2026-10-22T16:33:21Z
 11	attempt	2	—	d03c8650303fbdff49986ef5478ed53d11219964	—	—	2026-10-22T18:00:44Z
+12	session	2	S-663a38fe	—	—	—	2026-10-22T18:00:47Z
