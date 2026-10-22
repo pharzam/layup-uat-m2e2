@@ -109,3 +109,4 @@ docs/tests/test-levels.md	‹security scanner›	the value of ‹security scanne
 docs/tests/test-levels.md	‹test directory›	the value of ‹test directory› at docs/tests/test-levels.md:133
 tests/README.md	‹test directory›	the value of ‹test directory› at tests/README.md:7
 tests/README.md	‹test > directory›	the value of ‹test > directory› at tests/README.md:34
+docs/gates/coverage-floor.txt	‹the coverage floor of the test kind›	Which coverage floor, in percent of the statements, must the tests of the test kind reach, and what is its evidence?
