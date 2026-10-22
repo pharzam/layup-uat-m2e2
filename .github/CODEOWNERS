@@ -1,0 +1,4 @@
+# Written by layup setup (S13): a change to a gate path waits for the Operator's review (docs/spec/loop.md).
+/.github/ @pharzam
+/docs/gates.tsv @pharzam
+/docs/gates/ @pharzam
