@@ -1,0 +1,5 @@
+verdict: approve
+The four fields and empty tests: list satisfy the plan form for T-yzst, issue 3, kind specification. No build tests are required at this step.
+The issue assigns REQ-001 through REQ-017 and NFR-018 through NFR-024. The stated CLI, exit codes and separate count package agree with the supplied requirements and owner answers; no new dependency or unsupported interface is proposed. The scope is specification only, with one reading of "specified only, not built" (R13).
+The specification must preserve the assigned requirements and their fact traceability, including the stated counting, output, error and scope rules. The quality metrics belong in the PRD success metrics with the owner-confirmed measurements.
+For this initial specification, MoSCoW and Phase cells remain blank, not —, until the first bet, and no numbered facts record is written by the task; the plan makes no contrary promise. The supplied fixtures and generic rules do not override these explicit step instructions. No decision records were supplied.
