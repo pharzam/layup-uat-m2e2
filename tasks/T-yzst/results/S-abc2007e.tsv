@@ -1,0 +1,6 @@
+kind	n	value	sha256	reason
+status	1	completed	—	PRD-0001, SPEC-0001 and the task file written and committed; onboarding finding fixed; prd-lint fails only on the empty MoSCoW and Phase cells left for the bet
+artifact	1	docs/tasks/T-yzst.md	61028595e4bc3896f56c7cc5b35d944fb286358eb6021ddee297bf3d84125e6e	—
+artifact	2	docs/prd/PRD-0001-tally.md	056355209b5f4c4b2f898e5dcac4fe8db668d1bc4f42257467f02c9c093f0248	—
+artifact	3	docs/prd/README.md	36ab832f864e6acb60e0650db4f2d5ab9658c819819427b205c8c19c470fe76e	—
+artifact	4	docs/spec/SPEC-0001-tally.md	ef862e90465a3e4015f96fff5a966efd78754f39c3a4776c2c69efdd9f5e9c00	—
