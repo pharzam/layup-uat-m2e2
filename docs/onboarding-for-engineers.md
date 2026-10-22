@@ -174,5 +174,8 @@ idea owner's answers are recorded as facts, and the delivery has its success
 criteria (F-0001#15). The requirements are derived: [PRD-0001](prd/PRD-0001-tally.md)
 states them as REQ-001 to REQ-017 and NFR-018 to NFR-024, and
 [SPEC-0001](spec/SPEC-0001-tally.md) specifies each one; their MoSCoW priorities and
-phases are set at the first bet. No Go code exists yet. The next step is to write the
+phases are set at the first bet. The architecture is written:
+[SPEC-0002](spec/SPEC-0002-architecture.md) states the components and the flow of
+a run, ADR-0011 to ADR-0015 record five decided choices, and the module layout and
+the white-space class are pending the bet. No Go code exists yet. The next step is to write the
 first failing test for the package `count`, from the specification.
