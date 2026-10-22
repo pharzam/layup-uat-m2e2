@@ -1,0 +1,155 @@
+id	file	line	marker	value	start	end	session
+M-2e44ba0f	.githooks/README.md	34	‹lint›	—	—	—	S-72635212
+M-c564d8b0	.githooks/pre-commit	119	‹lint command, e.g. a formatter --check plus a linter›	—	—	—	S-72635212
+M-fc1f2462	.githooks/pre-commit	120	‹your-linter›	—	—	—	S-72635212
+M-aa65fc17	.githooks/pre-commit	124	‹unit test command›	—	—	—	S-72635212
+M-e774fb35	.githooks/pre-commit	125	‹integration test command›	—	—	—	S-72635212
+M-2de1f5df	.githooks/pre-commit	126	‹end-to-end test command›	—	—	—	S-72635212
+M-e00b772e	.githooks/pre-commit	130	‹security test command›	—	—	—	S-72635212
+M-7f32b213	.githooks/pre-commit	131	‹security scanner›	—	—	—	S-72635212
+M-195ff798	AGENTS.md	104	‹worktree dir›	—	—	—	S-72635212
+M-bdd9913c	docs/ci/README.md	54	‹security scanner›	—	—	—	S-72635212
+M-6495c92f	docs/ci/README.md	105	‹owner›	—	—	—	S-72635212
+M-5d028d21	docs/ci/README.md	105	‹repo›	—	—	—	S-72635212
+M-0b785c51	docs/ci/README.md	105	‹default branch›	—	—	—	S-72635212
+M-028e8571	docs/ci/README.md	150	‹the setting under which a failing pipeline blocks the merge, and the command that sets it›	—	—	—	S-72635212
+M-1f5c33ee	docs/ci/README.md	207	‹the setting under which a failing pipeline blocks the merge›	—	—	—	S-72635212
+M-7c48752d	docs/ci/README.md	216	‹your linter/formatter›	—	—	—	S-72635212
+M-0ce4a492	docs/ci/github-actions-ci.yml	20	‹default branch, e.g. main›	—	—	—	S-72635212
+M-8a528664	docs/ci/github-actions-ci.yml	73	‹your linter/formatter›	—	—	—	S-72635212
+M-09fdeb15	docs/ci/github-actions-ci.yml	77	‹set up your toolchain here›	—	—	—	S-72635212
+M-abe92ef9	docs/ci/github-actions-ci.yml	78	‹lint command, e.g. a formatter --check plus a linter›	—	—	—	S-72635212
+M-5dbd065b	docs/ci/github-actions-ci.yml	89	‹unit test command›	—	—	—	S-72635212
+M-012c5b41	docs/ci/github-actions-ci.yml	91	‹integration test command›	—	—	—	S-72635212
+M-3c3a055e	docs/ci/github-actions-ci.yml	93	‹end-to-end test command›	—	—	—	S-72635212
+M-42192dd7	docs/ci/github-actions-ci.yml	93	‹test timeout›	—	—	—	S-72635212
+M-68334972	docs/ci/github-actions-ci.yml	96	‹security scanner›	—	—	—	S-72635212
+M-f3065341	docs/ci/github-actions-ci.yml	101	‹security test command›	—	—	—	S-72635212
+M-d4d55eea	docs/ci/gitlab-ci.yml	61	‹your toolchain image›	—	—	—	S-72635212
+M-5058397d	docs/ci/gitlab-ci.yml	63	‹lint command, e.g. a formatter --check plus a linter›	—	—	—	S-72635212
+M-38ba4192	docs/ci/gitlab-ci.yml	71	‹unit test command›	—	—	—	S-72635212
+M-4f7d3cd5	docs/ci/gitlab-ci.yml	72	‹integration test command›	—	—	—	S-72635212
+M-690628c4	docs/ci/gitlab-ci.yml	73	‹end-to-end test command›	—	—	—	S-72635212
+M-31f94d9c	docs/ci/gitlab-ci.yml	73	‹test timeout›	—	—	—	S-72635212
+M-947af50a	docs/ci/gitlab-ci.yml	77	‹security scanner image›	—	—	—	S-72635212
+M-a9082f90	docs/ci/gitlab-ci.yml	80	‹security test command›	—	—	—	S-72635212
+M-0f476199	docs/ci/gitlab-ci.yml	81	‹security scanner›	—	—	—	S-72635212
+M-2fc96e62	docs/engineering-discipline.md	63	‹test runner›	go test	2103	2217	S-72635212
+M-49a7ef50	docs/engineering-discipline.md	65	‹unit test command›	—	—	—	S-72635212
+M-93b8c433	docs/engineering-discipline.md	65	‹integration test command›	—	—	—	S-72635212
+M-ab93262e	docs/engineering-discipline.md	67	‹evidence store›	—	—	—	S-72635212
+M-c7a6dcec	docs/engineering-discipline.md	69	‹task-ID scheme›	—	—	—	S-72635212
+M-fb033949	docs/engineering-discipline.md	71	‹worktree dir›	—	—	—	S-72635212
+M-5758e032	docs/engineering-discipline.md	85	‹lint›	—	—	—	S-72635212
+M-81e133c1	docs/engineering-discipline.md	87	‹end-to-end test command›	—	—	—	S-72635212
+M-7bbbccd9	docs/engineering-discipline.md	88	‹security scanner›	—	—	—	S-72635212
+M-c01d787d	docs/engineering-discipline.md	219	‹your project treats as panel-worthy›	—	—	—	S-72635212
+M-8e4a74ae	docs/engineering-discipline.md	232	‹name your reasoning-tier models›	—	—	—	S-72635212
+M-b259db85	docs/engineering-discipline.md	233	‹name your execution-tier models›	—	—	—	S-72635212
+M-d0cfb752	docs/engineering-discipline.md	278	‹name the failure modes that hurt you most,   for example data leakage, race conditions, off-by-one, unhandled errors›	—	—	—	S-72635212
+M-d56aecb7	docs/engineering-discipline.md	601	‹task-ID›	—	—	—	S-72635212
+M-bcb0a256	docs/engineering-discipline.md	651	‹for example money in currency, time in hours, counts such as "about 996 times in 1,000" rather than a percentage of a percentage›	—	—	—	S-72635212
+M-b2b99265	docs/engineering-discipline.md	753	‹security test command›	—	—	—	S-72635212
+M-6ec806c4	docs/engineering-discipline.md	754	‹test timeout›	—	—	—	S-72635212
+M-70fdbb54	docs/engineering-discipline.md	754	‹test directory›	—	—	—	S-72635212
+M-65928152	docs/engineering-discipline.md	972	‹how the harness reports model, effort, tokens and elapsed time›	—	—	—	S-72635212
+M-f75cc068	docs/engineering-discipline.md	979	‹the plan and its review›	—	—	—	S-72635212
+M-60256d8d	docs/engineering-discipline.md	979	‹model›	—	—	—	S-72635212
+M-b18d7689	docs/engineering-discipline.md	979	‹effort›	—	—	—	S-72635212
+M-c5a97f9d	docs/engineering-discipline.md	979	‹tokens›	—	—	—	S-72635212
+M-1d352d62	docs/engineering-discipline.md	979	‹wall-clock›	—	—	—	S-72635212
+M-71a60563	docs/engineering-discipline.md	980	‹the decay review rounds›	—	—	—	S-72635212
+M-b988591c	docs/engineering-discipline.md	981	‹writing the tests and the code›	—	—	—	S-72635212
+M-f9a5c9e9	docs/engineering-discipline.md	982	‹isolate, guardrails, docs, close-out›	—	—	—	S-72635212
+M-8c3f695b	docs/engineering-discipline.md	982	‹model / `not applicable`›	—	—	—	S-72635212
+M-70fa0c3a	docs/engineering-discipline.md	983	‹sum›	—	—	—	S-72635212
+M-a36ded66	docs/glossary.md	25	‹term›	—	—	—	S-72635212
+M-a4a1e893	docs/glossary.md	25	‹abbr or —›	—	—	—	S-72635212
+M-beb0c2e7	docs/glossary.md	25	‹one or two sentences. State what it is and why it matters here.›	—	—	—	S-72635212
+M-031d6bb2	docs/glossary.md	25	‹a concrete instance that makes it real›	—	—	—	S-72635212
+M-1d102021	docs/glossary.md	103	‹Domain area one›	—	—	—	S-72635212
+M-cdffa2a4	docs/glossary.md	107	‹—›	—	—	—	S-72635212
+M-b61dd07f	docs/glossary.md	107	‹definition›	—	—	—	S-72635212
+M-c099b629	docs/glossary.md	107	‹example›	—	—	—	S-72635212
+M-d596cd91	docs/glossary.md	109	‹Domain area two›	—	—	—	S-72635212
+M-bc3e419a	docs/guardrails.md	19	‹State, in one plain sentence, the single worst mistake this project can make and what stops it — for example: "It is easy to build a result that looks great and is wrong; the defense is to write the pass/fail numbers down before the experiment runs."›	—	—	—	S-72635212
+M-7ac9832a	docs/guardrails.md	29	‹list the decisions that need a frozen rule —   thresholds, acceptance bars, go / no-go criteria›	—	—	—	S-72635212
+M-eeeeefcf	docs/guardrails.md	31	‹where a frozen rule is recorded so it provably   predates the result — for example a ticket, an intent record, a committed   config›	—	—	—	S-72635212
+M-74d71a97	docs/guardrails.md	41	‹List the failure modes that have actually hurt this project or its field. For each: the trap, why it is silent, and the check that catches it. Examples of the kind of thing that goes here:›	—	—	—	S-72635212
+M-1ebd874b	docs/guardrails.md	45	‹pitfall 1 — e.g. a data / input leak: future or out-of-scope information   reaching the code that must not see it›	—	—	—	S-72635212
+M-33e7cea2	docs/guardrails.md	47	‹pitfall 2 — e.g. a measurement that looks strong for the wrong reason›	—	—	—	S-72635212
+M-49b12dd5	docs/guardrails.md	48	‹pitfall 3 — e.g. an environment or scale difference between test and   production›	—	—	—	S-72635212
+M-bc2fa893	docs/guardrails.md	165	‹test timeout›	—	—	—	S-72635212
+M-0ed1b816	docs/guardrails.md	233	‹cheap smoke check›	—	—	—	S-72635212
+M-23306f7a	docs/guardrails.md	233	‹what "clean" looks like›	—	—	—	S-72635212
+M-8c4364d1	docs/guardrails.md	234	‹stronger check›	—	—	—	S-72635212
+M-b3213c82	docs/guardrails.md	234	‹pass condition›	—	—	—	S-72635212
+M-e7aa5184	docs/guardrails.md	234	‹cost›	—	—	—	S-72635212
+M-b743aff2	docs/guardrails.md	235	‹end-of-work check›	—	—	—	S-72635212
+M-ac3a9931	docs/guardrails.md	237	‹which checks catch which class of bug; which are cheap enough to wire into CI; which run once per change of a given kind›	—	—	—	S-72635212
+M-2655ab27	docs/guardrails.md	258	‹your record of record›	—	—	—	S-72635212
+M-a40395de	docs/guardrails.md	264	‹Link the references that justify your thresholds and checks, so a later reader can see they are not arbitrary.›	—	—	—	S-72635212
+M-68681077	docs/issue-workflow.md	18	‹task-ID scheme›	—	—	—	S-72635212
+M-538d3dcd	docs/issue-workflow.md	239	‹require a PR before merge›	—	—	—	S-72635212
+M-0690d23a	docs/issue-workflow.md	243	‹require the check before merge›	—	—	—	S-72635212
+M-696fecdc	docs/issue-workflow.md	244	‹add a coverage gate›	—	—	—	S-72635212
+M-3cd44c5c	docs/onboarding-for-engineers.md	20	‹Describe the product in plain language, with no unexplained jargon. What does it do, for whom, and what question was the project set out to answer. If the project has already answered part of that question, say so here.›	—	—	—	S-72635212
+M-4492d0d5	docs/onboarding-for-engineers.md	26	‹The vocabulary a reader hits in every other document, in dependency order — each term building on the last, not alphabetical. This is the same vocabulary as [glossary.md](glossary.md), but taught in prose, because definitions in isolation are hard to absorb. Use small diagrams and worked examples where they help.›	—	—	—	S-72635212
+M-5a23c5fe	docs/onboarding-for-engineers.md	31	‹First concept›	—	—	—	S-72635212
+M-7c261b56	docs/onboarding-for-engineers.md	33	‹Explain it. Prefer a concrete example or a small ASCII diagram.›	—	—	—	S-72635212
+M-137659bd	docs/onboarding-for-engineers.md	35	‹Second concept, building on the first›	—	—	—	S-72635212
+M-007a98e5	docs/onboarding-for-engineers.md	41	‹The core mechanism, concretely. If there is one central design — a main loop, a pipeline, a state machine — draw it and walk through it once.›	—	—	—	S-72635212
+M-87c98525	docs/onboarding-for-engineers.md	46	‹The one or two numbers, or the one hard constraint, that make this project difficult. State the consequence in units the reader already knows. This is the section that stops a new engineer from proposing the obvious thing that does not work.›	—	—	—	S-72635212
+M-2d903fc3	docs/onboarding-for-engineers.md	55	‹State the single most important cultural value — the thing that surprises new engineers and that they must not fight. For a research project it might be "we are more afraid of fooling ourselves than of being slow"; for a product it might be something else entirely.›	—	—	—	S-72635212
+M-b9a5f152	docs/onboarding-for-engineers.md	62	‹non-negotiable 1 — link the guardrail or gate it comes from›	—	—	—	S-72635212
+M-35e07132	docs/onboarding-for-engineers.md	63	‹non-negotiable 2›	—	—	—	S-72635212
+M-410eeef5	docs/onboarding-for-engineers.md	69	‹path›	—	—	—	S-72635212
+M-c46c6f40	docs/onboarding-for-engineers.md	69	‹what lives there›	—	—	—	S-72635212
+M-e8c52128	docs/onboarding-for-engineers.md	90	‹A short, honest status: what is built, what is in progress, and what the open question is. Keep this in step with the backlog and the headline numbers above.›	—	—	—	S-72635212
+M-dbe00007	docs/prd/README.md	12	‹slug›	—	—	—	S-72635212
+M-f6a91989	docs/prd/README.md	66	‹test runner›	go test	2103	2217	S-72635212
+M-03fdfbd0	docs/tasks/T-2w8k.md	16	‹default branch›	—	—	—	S-72635212
+M-6664997d	docs/tasks/backlog.md	16	‹task-ID scheme›	—	—	—	S-72635212
+M-512dcd69	docs/tasks/backlog.md	20	‹State your exact scheme here — for example: "T-" plus four characters drawn from 0-9 a-z minus the ambiguous i l o u; before using an ID, confirm tasks/<id>.md does not already exist."›	—	—	—	S-72635212
+M-9ed5ac83	docs/tasks/backlog.md	36	‹ID›	—	—	—	S-72635212
+M-2165aee7	docs/tasks/backlog.md	36	‹one-sentence summary›	—	—	—	S-72635212
+M-b97d0574	docs/tasks/backlog.md	36	‹ADR or doc link›	—	—	—	S-72635212
+M-c9d1db7b	docs/tasks/backlog.md	36	‹id›	—	—	—	S-72635212
+M-97d5d3bf	docs/tasks/completed.md	70	‹ID›	—	—	—	S-72635212
+M-fa1e33c3	docs/tasks/completed.md	70	‹one-sentence summary of what the task found or delivered›	—	—	—	S-72635212
+M-96fdd004	docs/tasks/completed.md	70	‹link›	—	—	—	S-72635212
+M-ded5096b	docs/tasks/completed.md	70	‹id›	—	—	—	S-72635212
+M-8532d6ec	docs/tests/README.md	23	‹unit test command›	—	—	—	S-72635212
+M-0f283031	docs/tests/README.md	23	‹integration test command›	—	—	—	S-72635212
+M-8bed9a22	docs/tests/README.md	27	‹security scanner›	—	—	—	S-72635212
+M-4e56fee9	docs/tests/dod-checklist.md	62	‹every requirement has a test›	—	—	—	S-72635212
+M-bed1887a	docs/tests/dod-checklist.md	62	‹unit \| integration›	—	—	—	S-72635212
+M-b38396d1	docs/tests/dod-checklist.md	62	‹a REQ/NFR row in the traceability table›	—	—	—	S-72635212
+M-bfa98997	docs/tests/dod-checklist.md	62	‹✓ / ✗›	—	—	—	S-72635212
+M-bda9ee87	docs/tests/dod-checklist.md	63	‹every user-facing path has a test›	—	—	—	S-72635212
+M-b6a6e5be	docs/tests/dod-checklist.md	63	‹e2e›	—	—	—	S-72635212
+M-9429dd38	docs/tests/dod-checklist.md	63	‹an E2E row per scenario›	—	—	—	S-72635212
+M-bedf730a	docs/tests/dod-checklist.md	64	‹a delivered feature is signed off by a person›	—	—	—	S-72635212
+M-e89b0567	docs/tests/dod-checklist.md	64	‹uat›	—	—	—	S-72635212
+M-bdfcdcd4	docs/tests/dod-checklist.md	64	‹a UAT row, human-checked›	—	—	—	S-72635212
+M-fe49eb57	docs/tests/dod-checklist.md	65	‹a bug fix has a test that fails on the old code›	—	—	—	S-72635212
+M-359ccf12	docs/tests/dod-checklist.md	65	‹a row citing the bug's task ID›	—	—	—	S-72635212
+M-90109bce	docs/tests/dod-checklist.md	66	‹a known pitfall from guardrails.md is defended against›	—	—	—	S-72635212
+M-430f1cf3	docs/tests/dod-checklist.md	66	‹unit \| integration \| e2e›	—	—	—	S-72635212
+M-9240d545	docs/tests/dod-checklist.md	66	‹a row with a Guardrail cell filled in›	—	—	—	S-72635212
+M-7739c031	docs/tests/dod-checklist.md	67	‹the review round citing commit, reviewer, lens and verdict›	—	—	—	S-72635212
+M-039684b2	docs/tests/example-fact-to-test.md	17	‹unit test > command›	—	—	—	S-72635212
+M-48887eed	docs/tests/example-fact-to-test.md	70	‹unit test command›	—	—	—	S-72635212
+M-fd7b4e00	docs/tests/example-fact-to-test.md	79	‹test directory›	—	—	—	S-72635212
+M-453d5915	docs/tests/scaling-checklist.md	10	‹test timeout›	—	—	—	S-72635212
+M-952fe1ce	docs/tests/security-checklist.md	9	‹security scanner›	—	—	—	S-72635212
+M-31cf51b3	docs/tests/security-checklist.md	10	‹security test command›	—	—	—	S-72635212
+M-0b74a79f	docs/tests/test-levels.md	52	‹unit test command›	—	—	—	S-72635212
+M-3bca9fd1	docs/tests/test-levels.md	64	‹integration test command›	—	—	—	S-72635212
+M-23375598	docs/tests/test-levels.md	76	‹end-to-end test command›	—	—	—	S-72635212
+M-793e2fd7	docs/tests/test-levels.md	77	‹test timeout›	—	—	—	S-72635212
+M-b97c9d4e	docs/tests/test-levels.md	117	‹security test command›	—	—	—	S-72635212
+M-8dc743c2	docs/tests/test-levels.md	119	‹security scanner›	—	—	—	S-72635212
+M-6f558ed8	docs/tests/test-levels.md	133	‹test directory›	—	—	—	S-72635212
+M-309f9c8f	tests/README.md	7	‹test directory›	—	—	—	S-72635212
+M-b0381356	tests/README.md	34	‹test > directory›	—	—	—	S-72635212
