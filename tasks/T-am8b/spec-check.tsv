@@ -1,0 +1,11 @@
+head	rule	result	detail
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	covers	pass	—
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	needs	pass	—
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	measures	pass	—
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	criteria	pass	—
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	classes	clear	before the first bet
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	inventory	clear	before the first bet
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	quotes	pass	—
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	sections	pass	—
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	tasks	pass	—
+c17c28c8c9c3578056f960aa98ba907bfbd15fc7	ran	pass	—
