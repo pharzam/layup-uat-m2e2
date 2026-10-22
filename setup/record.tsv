@@ -1,0 +1,252 @@
+step	name	value	source	ref
+S01	stack	go	answer	S01-stack
+S01	name	pharzam/layup-uat-m2e2	computed	records:start/start.tsv
+S01	visibility	public	computed	records:start/start.tsv
+S01	baseline	https://github.com/pharzam/armature	computed	records:start/start.tsv
+S01	brief.sha256	ecfd6cdb9b58c6594461bc04b626214a748095aafd340ebfa70af2aa753fbf80	computed	sha256 inputs/briefs/problem-statement.md
+S01	answers.sha256	caaf673f05c2ebb3263da8ee4980075ede7659edf6b197acba088415f0c4a3d2	computed	sha256 inputs/answers.tsv S01- Q-
+S01	done	S01-stack answered; the stack has a catalog entry	step	—
+S02	pin.source	https://github.com/pharzam/armature	computed	records:start/start.tsv
+S02	pin.commit	a95965534b14b0bf14ad74da0c9a45b5f4aedf88	computed	records:start/start.tsv
+S02	pin.tree	8ffb250afd584da8b418bc220fb6d72e802924ce	computed	records:start/start.tsv
+S02	pin.time	2026-10-22T14:39:11Z	computed	records:start/start.tsv
+S02	done	the commit and the tree of start.tsv	step	—
+S03	done	root tree = pin.tree	step	—
+S04	pin.adr	docs/adr/0009-pin-the-baseline.md	computed	the next free number of docs/adr/
+S04	answers.record	docs/facts/F-0001-setup-answers.md	computed	the next free ID of docs/facts/
+S04	answers.record.sha256	03b2b65d4bc3bbff5c10b542a9d391e7dc033f25921fa5e3a631347c7ca79db8	computed	sha256 docs/facts/F-0001-setup-answers.md
+S04	done	checks pin and facts	step	—
+S05	done	checks kit-history and link-lint	step	—
+S06	brief.copy	docs/facts/problem-statement-brief.md	computed	the raw file name of a brief
+S06	brief.copy.sha256	ecfd6cdb9b58c6594461bc04b626214a748095aafd340ebfa70af2aa753fbf80	computed	sha256 docs/facts/problem-statement-brief.md
+S06	done	check facts	step	—
+S07	file:docs/onboarding-for-engineers.md	ecb58cad4e816f7bb59f460e8719289d1c651bab3f1cf251dbb36aad9e22f3ef	computed	sha256 inputs/files/docs/onboarding-for-engineers.md
+S07	done	check onboarding	step	—
+S08	file:docs/glossary.md	1d037c42f202a5ffad60f1e5f996b4fc86f3594e995009b687e2e161187d5c35	computed	sha256 inputs/files/docs/glossary.md
+S08	done	check glossary	step	—
+S09	file:docs/guardrails.md	63aa90313dd309795585bb1d01fc47198c830fe726a7dc7b77c54a5a2c7101ec	computed	sha256 inputs/files/docs/guardrails.md
+S09	done	check guardrails	step	—
+S14	file:README.md	73c52ed78e4da5766b3c6a95d1c270c7e8990adbe94c0bc688370ff3293901f5	computed	sha256 inputs/files/README.md
+S14	file:AGENTS.md	f44e49caa6bfb93f4ce34d07bf64373e09d5d23099c9e1fa7b56ebb5702fc86b	computed	sha256 inputs/files/AGENTS.md
+S14	file:.githooks/README.md	af7280860f75ce98d9f04aab7629325aafcc795c3f7f43ecf68976e2308e7c35	computed	sha256 inputs/files/.githooks/README.md
+S14	file:docs/adr/README.md	50e9c4a7631ab60053260e20793bb47adbfef7ba254a0ee8463c581f9b11d1b8	computed	sha256 inputs/files/docs/adr/README.md
+S14	file:docs/ci/README.md	bbc2ff5d771d7638aeaffdb2b68404d5b555b6d880cca2556deeda03c49ae0a2	computed	sha256 inputs/files/docs/ci/README.md
+S14	file:docs/engineering-discipline.md	1ecc8aa36c9cd9c1a0ac696d5395d8b6ea39af0a67727847a61e0de717d0b186	computed	sha256 inputs/files/docs/engineering-discipline.md
+S14	file:docs/issue-workflow.md	db5f3aa9124bb5d14010adead90165aefd1d90a59287eb3303f968e9441d3ef8	computed	sha256 inputs/files/docs/issue-workflow.md
+S14	file:docs/links/README.md	613113832ab8e05212f54c493524006d775c306c308bb142387a2163f8080d7e	computed	sha256 inputs/files/docs/links/README.md
+S14	file:docs/prd/README.md	893fec4f2bd23bf25dff6ac9624b3299b81435abc9f31de93ac33d947f41875f	computed	sha256 inputs/files/docs/prd/README.md
+S14	file:docs/templates/README.md	bdbc03a684cbe1ba5f9818efdc7f9e0c7a9d2609bf722ad769ac6b8b3de61093	computed	sha256 inputs/files/docs/templates/README.md
+S14	file:docs/tests/README.md	aacb97e817b86aff5037eb13a7ede207777bd85b6c128c06e3949898a571bc60	computed	sha256 inputs/files/docs/tests/README.md
+S14	file:docs/tests/dod-checklist.md	10e3740aedfa77d13910ee48d98daf6358f49a1a1d8524c9ee20a7eac3bba1ef	computed	sha256 inputs/files/docs/tests/dod-checklist.md
+S14	file:docs/tests/example-fact-to-test.md	f3928cb73f93485722b729b0ac9fd7ebb919ea74e0782d3c457fa46e61e68db9	computed	sha256 inputs/files/docs/tests/example-fact-to-test.md
+S14	file:docs/tests/scaling-checklist.md	6abda6e8f7cee31587015c2474bc74ac29c2db668b0d33f2cb747f8c3da36487	computed	sha256 inputs/files/docs/tests/scaling-checklist.md
+S14	file:docs/tests/security-checklist.md	c59a58d4e83d9c718b23a8a2c5e0bef0ab27cb8a67df735e9a08e6a5afa7758d	computed	sha256 inputs/files/docs/tests/security-checklist.md
+S14	file:docs/tests/template-e2e.md	3cdd375a79f5227b068f85d3d0aff69e3bd4c4e0b110e8f0bc82323850632bee	computed	sha256 inputs/files/docs/tests/template-e2e.md
+S14	file:docs/tests/template-integration.md	f3e26a9af005e59e90d90e23fbc152a28e67a67a735dcf9cff4eae53da266042	computed	sha256 inputs/files/docs/tests/template-integration.md
+S14	file:docs/tests/template-uat.md	e75ccb1518ed78ef3ff56b03245f3475e37711402f3dc0b1105db8131c630b62	computed	sha256 inputs/files/docs/tests/template-uat.md
+S14	file:docs/tests/template-unit.md	4ff23849610cd8478913056e9c1be77105bde120aec7cef25724642545800235	computed	sha256 inputs/files/docs/tests/template-unit.md
+S14	file:docs/tests/test-levels.md	36be716286e31d6410c2f64c24a9412db202f941fd6e30e10647add6493aa65f	computed	sha256 inputs/files/docs/tests/test-levels.md
+S14	file:docs/tests/traceability-template.md	d26cf39d4f65d41e6d27ea9768f48ac11a97dd2ab41d8bd7199dcf7a2357bf14	computed	sha256 inputs/files/docs/tests/traceability-template.md
+S14	file:tests/README.md	e587244b5a90d3d15dcebcdca31d7777a20fd210973d86349ae86d7ba8bad2a7	computed	sha256 inputs/files/tests/README.md
+S14	done	checks identity and adapted	step	—
+S10	answers.sha256	360da07214a0b59b702443874a848420ea8d0c2fad57824d748643a31166a14a	computed	sha256 inputs/answers.tsv M-
+S10	done	every marker has an answer row	step	—
+S11	marker:.githooks/README.md:34	‹lint›	gap	docs/setup/open-gaps.tsv
+S11	marker:.githooks/pre-commit:119	‹lint command, e.g. a formatter --check plus a linter›	gap	docs/setup/open-gaps.tsv
+S11	marker:.githooks/pre-commit:120	‹your-linter›	gap	docs/setup/open-gaps.tsv
+S11	marker:.githooks/pre-commit:124	‹unit test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:.githooks/pre-commit:125	‹integration test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:.githooks/pre-commit:126	‹end-to-end test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:.githooks/pre-commit:130	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:.githooks/pre-commit:131	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:.githooks/pre-commit:132	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/README.md:54	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/README.md:105:20	‹owner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/README.md:105:32	‹repo›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/README.md:105:52	‹default branch›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/README.md:146:14	‹owner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/README.md:146:26	‹repo›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/README.md:146:46	‹default branch›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/README.md:150	‹the setting under which a failing pipeline blocks the merge, and the command that sets it›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/README.md:207	‹the setting under which a failing pipeline blocks the merge›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/README.md:216	‹your linter/formatter›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/README.md:217	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:20	‹default branch, e.g. main›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:22	‹default branch, e.g. main›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:73	‹your linter/formatter›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:77	‹set up your toolchain here›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:78	‹lint command, e.g. a formatter --check plus a linter›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:87	‹set up your toolchain here›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:89	‹unit test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:91	‹integration test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:93:14	‹end-to-end test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:93:77	‹test timeout›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:96	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:101	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:102	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:109	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:111	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/github-actions-ci.yml:113	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/gitlab-ci.yml:61	‹your toolchain image›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/gitlab-ci.yml:63	‹lint command, e.g. a formatter --check plus a linter›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/gitlab-ci.yml:67	‹your toolchain image›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/gitlab-ci.yml:71	‹unit test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/gitlab-ci.yml:72	‹integration test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/gitlab-ci.yml:73:7	‹end-to-end test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/gitlab-ci.yml:73:70	‹test timeout›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/gitlab-ci.yml:77	‹security scanner image›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/gitlab-ci.yml:80	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/gitlab-ci.yml:81	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/gitlab-ci.yml:84	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/gitlab-ci.yml:85	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/ci/gitlab-ci.yml:86	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:66	go test	answer	M-2fc96e62
+S11	marker:docs/engineering-discipline.md:69:4	‹unit test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:69:31	‹integration test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:71	‹evidence store›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:73	‹task-ID scheme›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:75	‹worktree dir›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:89	‹lint›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:91:4	‹unit test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:91:31	‹integration test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:91:65	‹end-to-end test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:92	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:113	‹worktree dir›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:144	‹evidence store›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:209	‹your project treats as panel-worthy›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:222	‹name your reasoning-tier models›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:223	‹name your execution-tier models›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:268	‹name the failure modes that hurt you most,   for example data leakage, race conditions, off-by-one, unhandled errors›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:531	‹evidence store›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:593	‹task-ID›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:643	‹for example money in currency, time in hours, counts such as "about 996 times in 1,000" rather than a percentage of a percentage›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:718	‹task-ID scheme›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:730	go test	answer	M-2fc96e62
+S11	marker:docs/engineering-discipline.md:744:5	‹unit test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:744:32	‹integration test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:744:66	‹end-to-end test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:745	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:746:1	‹test timeout›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:746:50	‹test directory›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:834:12	‹lint›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:834:60	‹unit test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:835:3	‹integration test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:835:46	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:896	‹worktree dir›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:898	‹worktree dir›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:934	‹evidence store›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:964	‹how the harness reports model, effort, tokens and elapsed time›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:971:2	‹the plan and its review›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:971:46	‹model›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:971:60	‹effort›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:971:75	‹tokens›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:971:90	‹wall-clock›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:972:2	‹the decay review rounds›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:972:46	‹model›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:972:60	‹effort›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:972:75	‹tokens›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:972:90	‹wall-clock›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:973:2	‹writing the tests and the code›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:973:53	‹model›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:973:67	‹effort›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:973:82	‹tokens›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:973:97	‹wall-clock›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:974:2	‹isolate, guardrails, docs, close-out›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:974:55	‹model / `not applicable`›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:974:112	‹wall-clock›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:975:20	‹sum›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/engineering-discipline.md:975:32	‹sum›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/issue-workflow.md:19	‹task-ID scheme›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/issue-workflow.md:39	‹task-ID scheme›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/issue-workflow.md:240	‹require a PR before merge›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/issue-workflow.md:244	‹require the check before merge›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/issue-workflow.md:245	‹add a coverage gate›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/issue-workflow.md:246	‹require the check before merge›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/issue-workflow.md:247	‹require the check before merge›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/issue-workflow.md:248	‹require the check before merge›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/issue-workflow.md:252	‹task-ID scheme›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/prd/README.md:12	‹slug›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/prd/README.md:66	go test	answer	M-f6a91989
+S11	marker:docs/tasks/backlog.md:16	‹task-ID scheme›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tasks/backlog.md:20	‹State your exact scheme here — for example: "T-" plus four characters drawn from 0-9 a-z minus the ambiguous i l o u; before using an ID, confirm tasks/<id>.md does not already exist."›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tasks/backlog.md:32:4	‹ID›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tasks/backlog.md:32:19	‹one-sentence summary›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tasks/backlog.md:32:48	‹ADR or doc link›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tasks/backlog.md:32:86	‹id›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tasks/completed.md:20:23	‹ID›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tasks/completed.md:20:38	‹one-sentence summary of what the task found or delivered›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tasks/completed.md:20:103	‹link›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tasks/completed.md:20:130	‹id›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/README.md:24:7	‹unit test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/README.md:24:34	‹integration test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/README.md:28	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/README.md:120	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:62:3	‹every requirement has a test›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:62:42	‹unit \| integration›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:62:72	‹a REQ/NFR row in the traceability table›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:62:122	‹✓ / ✗›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:63:3	‹every user-facing path has a test›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:63:47	‹e2e›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:63:61	‹an E2E row per scenario›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:63:95	‹✓ / ✗›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:64:3	‹a delivered feature is signed off by a person›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:64:59	‹uat›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:64:73	‹a UAT row, human-checked›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:64:108	‹✓ / ✗›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:65:3	‹a bug fix has a test that fails on the old code›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:65:61	‹unit \| integration›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:65:91	‹a row citing the bug's task ID›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:65:132	‹✓ / ✗›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:66:3	‹a known pitfall from guardrails.md is defended against›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:66:68	‹unit \| integration \| e2e›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:66:105	‹a row with a Guardrail cell filled in›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:66:153	‹✓ / ✗›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:67:108	‹the review round citing commit, reviewer, lens and verdict›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/dod-checklist.md:67:177	‹✓ / ✗›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/example-fact-to-test.md:18	‹unit test > command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/example-fact-to-test.md:73	‹unit test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/example-fact-to-test.md:76	‹unit test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/example-fact-to-test.md:82	‹test directory›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/scaling-checklist.md:10	‹test timeout›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/scaling-checklist.md:53	‹test timeout›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/scaling-checklist.md:93	‹test timeout›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/security-checklist.md:9	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/security-checklist.md:10	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/security-checklist.md:41	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/security-checklist.md:43	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/security-checklist.md:46	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/test-levels.md:52	‹unit test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/test-levels.md:64	‹integration test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/test-levels.md:76	‹end-to-end test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/test-levels.md:77	‹test timeout›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/test-levels.md:117	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/test-levels.md:119	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/test-levels.md:128	‹unit test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/test-levels.md:129	‹integration test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/test-levels.md:130	‹end-to-end test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/test-levels.md:131	‹security test command›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/test-levels.md:132	‹test timeout›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/test-levels.md:133	‹test directory›	gap	docs/setup/open-gaps.tsv
+S11	marker:docs/tests/test-levels.md:134	‹security scanner›	gap	docs/setup/open-gaps.tsv
+S11	marker:tests/README.md:7	‹test directory›	gap	docs/setup/open-gaps.tsv
+S11	marker:tests/README.md:34	‹test > directory›	gap	docs/setup/open-gaps.tsv
+S11	marker.record	docs/facts/F-0002-marker-answers.md	computed	the next free ID of docs/facts/
+S11	marker.record.sha256	9606e923f5bdeade9d0553f45da250bce886fe8ff9d7ce4b5c6054341e788d24	computed	sha256 docs/facts/F-0002-marker-answers.md
+S11	done	checks markers, sources and facts	step	—
+S12	module	github.com/pharzam/layup-uat-m2e2	computed	records:start/start.tsv
+S12	catalog:.github/gates.sh	58cff5d8bd0e70f4def6d6357697ea3e519bf82d0fc603768f3614520c360ad2	catalog	go/files/.github/gates.sh.tmpl
+S12	catalog:.github/workflows/gates.yml	33f044efb32a38ca6220f6abb83181c165596aa01bf9978ea45181ff23c55cc6	catalog	go/files/.github/workflows/gates.yml.tmpl
+S12	catalog:docs/gates/coverage-floor.txt	15506652c3a668e30501b2376027f71730e06409e7ca73a553cb063622c2def4	catalog	go/files/docs/gates/coverage-floor.txt.tmpl
+S12	catalog:go.mod	a61c3fbbac2c240217b30c13c955e1b9759f747a14f1f32b554fbd3a1d282348	catalog	go/files/go.mod.tmpl
+S12	catalog:docs/gates.tsv	e7bd548fd509a1bb1d9b6c6075f4113e03ea138275a7d00aefdadd002c39e6e1	catalog	go/kinds.tsv
+S12	marker:docs/gates/coverage-floor.txt:1	‹the coverage floor of the test kind›	gap	docs/setup/open-gaps.tsv
+S12	done	checks jobs and gates	step	—
+S13	branch-protection.sha256	7327f8d86e29b110fed342db47756b9c3a6f33521fbf5f0703f4633cca7af474	computed	sha256 docs/setup/branch-protection.json
+S13	ruleset.sha256	fd790bfb53f96bbc6ed078c3631f2f1cbbaff661893e0b839eb495214ccf013f	computed	sha256 out/ruleset-default.json
+S13	codeowners.sha256	7894b100149bda0f14b7cf6acc9524fe03c3e6dc6fb1b0764b44cca6a27b08d9	computed	sha256 .github/CODEOWNERS
+S13	without-layup	To merge with LAYUP absent, remove the required checks layup/gates, layup/spec, layup/verify and layup/rules from the ruleset "layup: the default branch".	computed	out/ruleset-default.json
+S13	done	handed to the Operator: the ruleset files, and their commands in commands.sh	step	—
+S15	setup.head	c04ec636470711d7a46dc2f3b672849be72dc16f	computed	git rev-parse layup-setup
+S15	verify.sha256	368a24d474dd3a5846ca85bca015c636bf788b727d15a2b24a0465c66bed47c8	computed	sha256 out/verify.tsv
+S15	rule-paths.sha256	19c2423eb30829e3f69d3fd27f4af67cd4bbb993b879fe5ffa29f0e6af3af161	computed	sha256 out/rule-paths.tsv
+S15	done	every row of verify.tsv is pass or clear	step	—
