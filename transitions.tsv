@@ -1,0 +1,15 @@
+from	to	artifacts	items
+task plan	plan review	plan	schema artifacts plan-fields
+plan review	developer	plan-review	schema artifacts verdict-field
+developer (build task)	verifier	commits task-file	schema artifacts tests-red-green
+developer (specification)	verifier	commits task-file	schema artifacts spec-sections
+developer (architecture)	verifier	commits task-file	schema artifacts
+developer (rule batch)	verifier	commits task-file patch	schema artifacts patch-per-kind
+developer (milestone plan)	verifier	rows	schema artifacts register-rows
+code (rendered task)	verifier	rendering	artifacts rendering-equal
+verifier	close-out	review-record	schema artifacts nothing-material
+verifier	developer	review-record	schema artifacts findings-located
+specification	milestone plan	task-file	artifacts heading-ids
+asking role	owner role	question	schema question-row
+owner role	asking role	answer	schema answer-row
+plan review	task plan	plan-review	schema artifacts reject-reasons
