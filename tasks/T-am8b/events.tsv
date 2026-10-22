@@ -26,3 +26,4 @@ n	kind	attempt	session	base	sha	detail	time
 25	handoff	3	S-045c56f7	—	—	valid	2026-10-22T18:10:35Z
 26	session	3	S-0465b007	—	—	—	2026-10-22T18:11:11Z
 27	result	3	S-0465b007	—	—	done	2026-10-22T18:12:45Z
+28	handoff	3	S-0465b007	—	—	valid comment 6347893425-1	2026-10-22T18:12:55Z
