@@ -25,3 +25,4 @@ n	kind	attempt	session	base	sha	detail	time
 24	bound	3	S-045c56f7	—	0ebf7d9e0f4f91881cce4d1368c9e62826fcc98a	task/T-am8b/3	2026-10-22T18:10:30Z
 25	handoff	3	S-045c56f7	—	—	valid	2026-10-22T18:10:35Z
 26	session	3	S-0465b007	—	—	—	2026-10-22T18:11:11Z
+27	result	3	S-0465b007	—	—	done	2026-10-22T18:12:45Z
