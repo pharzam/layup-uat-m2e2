@@ -10,3 +10,4 @@ n	kind	attempt	session	base	sha	detail	time
 9	result	1	S-dcafc5f7	—	—	done	2026-10-22T16:19:38Z
 10	push	1	S-dcafc5f7	—	65bf23a4380a2794811496e5a42e56203893e2f4	task/T-yzst/1	2026-10-22T16:19:40Z
 11	bound	1	S-dcafc5f7	—	65bf23a4380a2794811496e5a42e56203893e2f4	task/T-yzst/1	2026-10-22T16:19:43Z
+12	handoff	1	S-dcafc5f7	—	—	valid	2026-10-22T16:19:48Z
