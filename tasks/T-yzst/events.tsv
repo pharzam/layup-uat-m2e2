@@ -13,3 +13,4 @@ n	kind	attempt	session	base	sha	detail	time
 12	handoff	1	S-dcafc5f7	—	—	valid	2026-10-22T16:19:48Z
 13	session	1	S-2409a878	—	—	—	2026-10-22T16:20:12Z
 14	result	1	S-2409a878	—	—	done	2026-10-22T16:21:41Z
+15	handoff	1	S-2409a878	—	—	valid comment 6345689547-1	2026-10-22T16:21:52Z
