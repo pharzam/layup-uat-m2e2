@@ -1,0 +1,603 @@
+diff --git a/docs/adr/0010-record-product-architecture-decisions.md b/docs/adr/0010-record-product-architecture-decisions.md
+new file mode 100644
+index 0000000..a9af8be
+--- /dev/null
++++ b/docs/adr/0010-record-product-architecture-decisions.md
+@@ -0,0 +1,49 @@
++# 0010. Record the product's architecture decisions beside the constitution
++
++Date: 2026-10-22
++
++## Status
++
++Accepted
++
++## Context
++
++[`engineering-discipline.md`](../engineering-discipline.md#architecture-decision-records)
++sends every architecturally significant decision — structure, non-functional
++characteristics, dependencies, interfaces, construction techniques — to an ADR in
++this directory. The [index](README.md#what-belongs-in-this-directory) of this
++directory restricted it to records that constitute *a project*, generic enough to
++carry onto any domain. A decision about how the product itself is built — its
++build, its packages, its parsing, its reading — is architecturally significant and
++is not generic, so the two rules sent it to two different places, and no other home
++for it existed. A record that has no permitted home is either not written or written
++against a rule.
++
++## Decision
++
++We will keep the product's own architecture decisions in this directory, in the one
++ADR sequence, with the same format, linter and immutability as every other record.
++A **product record** decides how the product is built; a **constitutional record**
++decides how any project is run. Each product record says, in its Context, that it is
++a product record.
++
++A product record keeps rule 1 of the index: it references no issue or pull request.
++It may link, beyond the sibling constitutive documents, to the product's own
++requirements ([`prd/`](../prd/)), specification ([`spec/`](../spec/)) and facts
++([`facts/`](../facts/)), which travel with the product. It keeps rule 2 and never
++links into the closed archive.
++
++We reject a second directory for product records, which would split the single ADR
++sequence and its linter in two, and we reject keeping product decisions out of ADRs,
++which would leave the structure of the product undecided on paper.
++
++## Consequences
++
++- A copy of this repository onto another domain keeps the constitutional records and
++  drops the product records; the Context line of each record says which it is.
++- The index of this directory and
++  [`engineering-discipline.md`](../engineering-discipline.md#architecture-decision-records)
++  name both kinds of record.
++- A decision that has more than one option surviving the filter is not an ADR yet:
++  it stays a section "Decision pending the bet" in the architecture under
++  [`spec/`](../spec/) until the bet picks one.
+diff --git a/docs/adr/0011-build-with-go-build-only.md b/docs/adr/0011-build-with-go-build-only.md
+new file mode 100644
+index 0000000..89071bf
+--- /dev/null
++++ b/docs/adr/0011-build-with-go-build-only.md
+@@ -0,0 +1,31 @@
++# 0011. Build tally with go build only
++
++Date: 2026-10-22
++
++## Status
++
++Accepted
++
++## Context
++
++This is a product record ([ADR-0010](0010-record-product-architecture-decisions.md)).
++tally is built with the Go toolchain and needs no other build tool
++([NFR-020](../prd/PRD-0001-tally.md), F-0003#3), in Go with the standard library
++only (NFR-018, NFR-019). Two options were filtered against the requirements, the
++facts, the invariants of [`guardrails.md`](../guardrails.md) and ADR-0001 to
++ADR-0009: `go-build-only` and `make-wrapper`.
++
++## Decision
++
++We will build tally with the commands of the Go toolchain alone: `go build` builds
++the binary and `go test` runs the tests, with no build file of another tool. The
++architecture is [SPEC-0002](../spec/SPEC-0002-tally-architecture.md).
++
++We reject `make-wrapper`, a Makefile around the Go commands: it fails NFR-020 and
++fact F-0003#3, because building then needs a tool other than the Go toolchain.
++
++## Consequences
++
++- A clone builds wherever Go is installed, with no other tool.
++- The exact Go command of each test level is still the team's to name in
++  [`test-levels.md`](../tests/test-levels.md); this record names none.
+diff --git a/docs/adr/0012-count-with-three-functions-over-a-teed-reader.md b/docs/adr/0012-count-with-three-functions-over-a-teed-reader.md
+new file mode 100644
+index 0000000..0cd5705
+--- /dev/null
++++ b/docs/adr/0012-count-with-three-functions-over-a-teed-reader.md
+@@ -0,0 +1,38 @@
++# 0012. Count with three functions over a teed reader
++
++Date: 2026-10-22
++
++## Status
++
++Accepted
++
++## Context
++
++This is a product record ([ADR-0010](0010-record-product-architecture-decisions.md)).
++The package `count` exports the functions that count the lines, the words and the
++characters of an `io.Reader`, and the command calls them
++([NFR-021](../prd/PRD-0001-tally.md), Q-010). Standard input can be read only once
++(REQ-008), and the peak heap for a 1 GiB file is at most 64 MiB (F-0003#24, Q-009).
++Three options were filtered: `three-functions-teed-reader`,
++`three-functions-reread-source` and `single-combined-function`.
++
++## Decision
++
++We will export three functions from the package `count` — one for the lines, one
++for the words and one for the characters — each over an `io.Reader`. The command
++reads each source once and feeds the same bytes to the three counts through a teed
++reader, so no source is read twice. The architecture is
++[SPEC-0002](../spec/SPEC-0002-tally-architecture.md).
++
++We reject `three-functions-reread-source`, which opens or reads the source once for
++each count: it fails REQ-008, because standard input cannot be read a second time.
++We reject `single-combined-function`, one exported function that returns the three
++counts: it fails NFR-021, which asks for the functions that count the lines, the
++words and the characters.
++
++## Consequences
++
++- Each count has its own function to test, which serves the 90 percent coverage
++  target of the package `count`.
++- The teed reading must keep memory bounded: the three counts consume the bytes as
++  they flow, never a copy of the whole file ([ADR-0014](0014-stream-through-a-fixed-buffer.md)).
+diff --git a/docs/adr/0013-parse-flags-by-hand.md b/docs/adr/0013-parse-flags-by-hand.md
+new file mode 100644
+index 0000000..773c6ac
+--- /dev/null
++++ b/docs/adr/0013-parse-flags-by-hand.md
+@@ -0,0 +1,39 @@
++# 0013. Parse the flags with a hand-written parser
++
++Date: 2026-10-22
++
++## Status
++
++Accepted
++
++## Context
++
++This is a product record ([ADR-0010](0010-record-product-architecture-decisions.md)).
++The command is `tally [-l] [-w] [-c] [file...]`; combined flags such as `-lw` mean
++`-l -w`, the name `-` is a file, and an unknown flag or wrong usage prints a usage
++message on standard error and exits with 2 ([REQ-002 to REQ-005](../prd/PRD-0001-tally.md),
++Q-002). The counts print in the fixed order lines, words, characters, whatever the
++order of the flags (Inv-1 of [`guardrails.md`](../guardrails.md)). Only the
++standard library may be used (NFR-019). Three options were filtered:
++`hand-written-parser`, `stdlib-flag-package` and `third-party-getopt`.
++
++## Decision
++
++We will parse the command line with a parser written in the package `main`. It
++reads each argument that starts with `-` and has more letters as a set of the flags
++`l`, `w` and `c`, so `-lw` sets two flags; it reads the argument `-` alone as a file
++name; it reports any other letter, or any other wrong usage, as a usage error with
++the exit code 2. The flags only select counts; the order of the printed counts is
++fixed apart from them. The architecture is
++[SPEC-0002](../spec/SPEC-0002-tally-architecture.md).
++
++We reject `stdlib-flag-package`, the package `flag` of the standard library: it
++fails REQ-003, because it does not read `-lw` as `-l -w`, and Inv-1. We reject
++`third-party-getopt`: it fails NFR-019 and fact F-0003#2, because it is a
++third-party dependency.
++
++## Consequences
++
++- The parser is small and is the command's own code to test, every combination of
++  flags included.
++- The usage message and its wording are the parser's to own.
+diff --git a/docs/adr/0014-stream-through-a-fixed-buffer.md b/docs/adr/0014-stream-through-a-fixed-buffer.md
+new file mode 100644
+index 0000000..d175ea3
+--- /dev/null
++++ b/docs/adr/0014-stream-through-a-fixed-buffer.md
+@@ -0,0 +1,33 @@
++# 0014. Stream each file through a fixed buffer
++
++Date: 2026-10-22
++
++## Status
++
++Accepted
++
++## Context
++
++This is a product record ([ADR-0010](0010-record-product-architecture-decisions.md)).
++The peak heap while tally counts a file of 1 GiB is at most 64 MiB, sampled every 10
++milliseconds ([NFR and success metrics of PRD-0001](../prd/PRD-0001-tally.md),
++F-0003#24, Q-009), and a file of 10 MiB is counted in at most 2 seconds (Q-008). Two
++options were filtered: `stream-fixed-buffer` and `read-whole-file`.
++
++## Decision
++
++We will read each file and standard input in pieces, through a buffer of fixed size
++that is reused for the whole source, and count each piece as it arrives. The heap
++the reading needs then does not grow with the size of the file. A code point split
++across two pieces is carried to the next piece, never counted twice nor lost. The
++architecture is [SPEC-0002](../spec/SPEC-0002-tally-architecture.md).
++
++We reject `read-whole-file`, which reads the whole file into memory before counting:
++it fails the peak-heap criterion (draft R-026), because a file of 1 GiB would need
++at least 1 GiB of heap.
++
++## Consequences
++
++- The memory a count uses is bounded by the buffer, whatever the size of the file.
++- The size of the buffer is left unfrozen; the time and memory tests of the success
++  metrics judge it.
+diff --git a/docs/adr/0015-validate-utf-8-in-the-stream.md b/docs/adr/0015-validate-utf-8-in-the-stream.md
+new file mode 100644
+index 0000000..8810905
+--- /dev/null
++++ b/docs/adr/0015-validate-utf-8-in-the-stream.md
+@@ -0,0 +1,39 @@
++# 0015. Validate UTF-8 in the stream and print the row after the end of the file
++
++Date: 2026-10-22
++
++## Status
++
++Accepted
++
++## Context
++
++This is a product record ([ADR-0010](0010-record-product-architecture-decisions.md)).
++A file that is not valid UTF-8 gets a message on standard error with its name and the
++exit code 1; it gets no row and adds nothing to the total; the other files are still
++counted, and rows already printed for earlier files stay
++([REQ-016](../prd/PRD-0001-tally.md), Q-003, Inv-3 of
++[`guardrails.md`](../guardrails.md)). A file is not text exactly when it is not valid
++UTF-8 (NFR-023, Q-007). Three options were filtered:
++`validate-in-stream-print-after-eof`, `print-row-while-reading` and
++`replace-invalid-with-fffd`.
++
++## Decision
++
++We will check that the bytes are valid UTF-8 while they stream through the buffer
++([ADR-0014](0014-stream-through-a-fixed-buffer.md)), and print a file's row only once
++the end of the file is reached with no invalid sequence. On the first invalid
++sequence tally stops reading that file, prints the message, adds nothing to the
++total and goes on with the next file. The architecture is
++[SPEC-0002](../spec/SPEC-0002-tally-architecture.md).
++
++We reject `print-row-while-reading`, which writes the row before the whole file is
++checked: it fails Inv-3, because an invalid byte found late would follow a row
++already printed. We reject `replace-invalid-with-fffd`, which counts each invalid
++sequence as U+FFFD: it fails NFR-023, fact F-0003#11 and Inv-3, because it counts a
++file that is not text.
++
++## Consequences
++
++- One pass over each file both validates and counts it; no file is read twice.
++- A file's counts are held until its end, so the total adds only files found valid.
+diff --git a/docs/adr/README.md b/docs/adr/README.md
+index 6857f27..4a61d75 100644
+--- a/docs/adr/README.md
++++ b/docs/adr/README.md
+@@ -6,9 +6,15 @@ for the full rationale.
+ 
+ ## What belongs in this directory
+ 
+-`docs/adr/` is tally's **living constitution**: it holds only records that
+-constitute *a project*, generic enough to carry onto any domain. Two
+-rules keep it that way, and both are **written rules** — no linter enforces them
++`docs/adr/` is tally's **living constitution**, and it holds two kinds of record
++(ADR 0010). A **constitutional record** constitutes *a project*, generic enough to
++carry onto any domain. A **product record** decides how tally itself is built — its
++build, packages, interfaces and construction techniques — and says so in its
++Context; it may also link to tally's own [`prd/`](../prd/), [`spec/`](../spec/) and
++[`facts/`](../facts/). A decision with more than one option surviving the filter is
++not a record yet: it waits in the architecture under [`spec/`](../spec/), in a
++section "Decision pending the bet". Two
++rules keep both kinds portable, and both are **written rules** — no linter enforces them
+ (`link-lint` checks that a link resolves, not which way it points; `adr-lint`
+ reads only this directory), so the [plan review](../issue-workflow.md#r12--slice-and-prioritize)
+ and the [decay rounds](../engineering-discipline.md#reviewing-until-findings-decay)
+@@ -30,7 +36,7 @@ are their enforcement:
+    survives the deletion.)
+ 
+ **Numbering.** `docs/adr/` is the single living ADR sequence, numbered
+-contiguously from `0001`, and it grows — the next constitutional ADR is `0009`. A
++contiguously from `0001`, and it grows — the next ADR, of either kind, is `0016`. A
+ bare "ADR-NNNN" means this directory's sequence. The archive under `docs/decisions/`
+ has its **own namespace**: a prefixed, zero-based sequence `D-0000`–`D-0007` that
+ shares no number with this one and is cited **by its `D-NNNN` identifier** — named
+@@ -136,6 +142,12 @@ record by number here, and let the index table below do the linking.
+ | [0007](0007-record-task-resource-use.md)        | Record each task's resource use | Accepted |
+ | [0008](0008-require-one-reading-in-decision-driving-text.md) | Require one reading in decision-driving text | Accepted |
+ | [0009](0009-pin-the-baseline.md) | Pin the baseline | Accepted |
++| [0010](0010-record-product-architecture-decisions.md) | Record the product's architecture decisions beside the constitution | Accepted |
++| [0011](0011-build-with-go-build-only.md) | Build tally with go build only | Accepted |
++| [0012](0012-count-with-three-functions-over-a-teed-reader.md) | Count with three functions over a teed reader | Accepted |
++| [0013](0013-parse-flags-by-hand.md) | Parse the flags with a hand-written parser | Accepted |
++| [0014](0014-stream-through-a-fixed-buffer.md) | Stream each file through a fixed buffer | Accepted |
++| [0015](0015-validate-utf-8-in-the-stream.md) | Validate UTF-8 in the stream and print the row after the end of the file | Accepted |
+ 
+ <!-- Add one row per ADR as you write them. Keep the newest at the bottom. -->
+ 
+diff --git a/docs/engineering-discipline.md b/docs/engineering-discipline.md
+index edf761d..0cc682a 100644
+--- a/docs/engineering-discipline.md
++++ b/docs/engineering-discipline.md
+@@ -538,8 +538,9 @@ lightweight format described by Michael Nygard. Copy
+ [`adr/template.md`](adr/template.md) for each new record; the process and the
+ index live in [`adr/README.md`](adr/README.md), and
+ [`adr/0001-record-architecture-decisions.md`](adr/0001-record-architecture-decisions.md)
+-records the decision to use ADRs. `adr/` holds only records that constitute a
+-project; the baseline's own past governance decisions were archived under
++records the decision to use ADRs. `adr/` holds the records that constitute a
++project and, beside them, the product's own architecture decisions
++([ADR-0010](adr/0010-record-product-architecture-decisions.md)); the baseline's own past governance decisions were archived under
+ `docs/decisions/`, which tally's setup removed.
+ 
+ A decision is "architecturally significant" if it affects structure,
+diff --git a/docs/glossary.md b/docs/glossary.md
+index e00079e..0f35cb1 100644
+--- a/docs/glossary.md
++++ b/docs/glossary.md
+@@ -54,7 +54,7 @@ section as-is; tally's own terms go in the sections below.
+ | Simplified Technical English | `STE` | A controlled subset of English — the ASD-STE100 standard — with a limited vocabulary and short, active sentences, used for unambiguous technical writing. In this project it is the language of the derived requirements written from [facts documents](facts/). Collision to watch for: not the same as a [plain-language summary](engineering-discipline.md#plain-language-summaries) — STE is a formal standard, a plain-language summary is just jargon-free prose. | The requirements derived from `F-0001` are written in STE: short, active sentences drawn from the approved word list. |
+ | Product Requirements Document | `PRD` | Layer 2 of the two-layer facts rule: a versioned document under [`prd/`](prd/) whose every requirement cites the `F-NNNN` fact it derives from. Collision to watch for: not a `PR` (pull request) — a PRD is a requirements document, a PR is a code change. | A `PRD-NNNN` collects a product's requirements; each `REQ`/`NFR` in it names the fact it came from. |
+ | Requirement ID | `REQ` / `NFR` | The stable ID of one functional (`REQ-NNN`) or non-functional (`NFR-NNN`) requirement in a [PRD](prd/); assigned once, never reused or renumbered. | `REQ-001` states one capability; `NFR-001` states one quality attribute such as a latency bound. |
+-| Specification | `SPEC` | A document under [`spec/`](spec/), `SPEC-NNNN`, that states how the product behaves, with one section per `REQ`/`NFR` of a [PRD](prd/), headed by its ID. Collision to watch for: not the PRD — the PRD lists the requirements and their facts; the specification says, for each one, the exact behaviour a test checks. | `SPEC-0001` has a section `REQ-009` that says how tally counts the lines of a file with no final line feed. |
++| Specification | `SPEC` | A document under [`spec/`](spec/), `SPEC-NNNN`, that states how the product behaves, with one section per `REQ`/`NFR` of a [PRD](prd/), headed by its ID — or how the product is built, with one section per architecture decision, as `SPEC-0002` does. Collision to watch for: not the PRD — the PRD lists the requirements and their facts; the specification says, for each one, the exact behaviour a test checks. | `SPEC-0001` has a section `REQ-009` that says how tally counts the lines of a file with no final line feed. |
+ | MoSCoW | `—` | A prioritisation scheme — Must, Should, Could, Won't — carried in a PRD requirement's priority column, so the statement need not repeat "shall". | A Must requirement ships in the first phase; a Won't is explicitly out of scope, with an em-dash phase. |
+ | Test-Driven Development | `TDD` | Write the failing test first, watch it fail for the right reason, then write the code that makes it pass. The baseline's default order for a feature or a fix. | R8 of the [issue workflow](issue-workflow.md) states TDD in strict mode: red, then green. |
+ | Pull Request | `PR` | The unit of change review and merge: a branch proposed for landing on the default branch. The baseline lands every change via a PR, never a direct push. Collision to watch for: not a `PRD` — see above. | The [`pre-push` hook](../.githooks/pre-push) refuses a direct push to `main`; a PR is how the change lands. |
+diff --git a/docs/guardrails.md b/docs/guardrails.md
+index 7b6667c..6e455e8 100644
+--- a/docs/guardrails.md
++++ b/docs/guardrails.md
+@@ -212,6 +212,14 @@ success without having done its job.
+   **The check:** read the failures; while every one is of those two kinds and the
+   bet has not run, the PRD is as intended. Any other failure is a real defect.
+ 
++- ❌ **An architecture that chooses among survivors.** When the filter leaves more
++  than one option of a decision standing, the choice belongs to the bet. A plan or
++  an architecture that picks one "because it reads better" decides what nobody was
++  asked to decide, and the reason given sounds like evidence. **The check:** in
++  [SPEC-0002](spec/SPEC-0002-tally-architecture.md), a decision with more than one
++  survivor has a section "Decision pending the bet" that lists them all and decides
++  nothing, and no ADR records it until the bet has run.
++
+ ### Testing pitfalls (project-wide — keep these)
+ 
+ These traps are not domain-specific: they hurt every project's test suite, so the
+diff --git a/docs/onboarding-for-engineers.md b/docs/onboarding-for-engineers.md
+index 2a735e2..d1d6093 100644
+--- a/docs/onboarding-for-engineers.md
++++ b/docs/onboarding-for-engineers.md
+@@ -152,7 +152,7 @@ Consequences you will meet immediately, and which are not negotiable:
+ | [`glossary.md`](glossary.md) | The shared vocabulary. Skim it; come back constantly. |
+ | [`facts/`](facts/) | Facts collected from the idea owner, stored as-is as immutable evidence. Derived requirements cite them by `F-NNNN` ID. |
+ | [`prd/`](prd/) | Product Requirements Documents, derived from the facts; each `REQ`/`NFR` cites an `F-NNNN` fact. |
+-| [`spec/`](spec/) | The specification of tally: one section per `REQ`/`NFR` of the PRD, saying how the command and the package `count` behave. |
++| [`spec/`](spec/) | The specification of tally: one section per `REQ`/`NFR` of the PRD, saying how the command and the package `count` behave; and its architecture, saying how they are built. |
+ | [`issue-workflow.md`](issue-workflow.md) | The issue-first rules (R1–R13): the ticket policy the gate assumes. |
+ | [`tasks/backlog.md`](tasks/backlog.md) | What to work on next. |
+ | [`tests/`](../tests/) | Where tally's product tests go once there is Go code. |
+@@ -174,5 +174,8 @@ idea owner's answers are recorded as facts, and the delivery has its success
+ criteria (F-0001#15). The requirements are derived: [PRD-0001](prd/PRD-0001-tally.md)
+ states them as REQ-001 to REQ-017 and NFR-018 to NFR-024, and
+ [SPEC-0001](spec/SPEC-0001-tally.md) specifies each one; their MoSCoW priorities and
+-phases are set at the first bet. No Go code exists yet. The next step is to write the
+-first failing test for the package `count`, from the specification.
++phases are set at the first bet. [SPEC-0002](spec/SPEC-0002-tally-architecture.md)
++states the architecture: five decisions are taken, each in its own ADR, and two —
++the module layout and the white-space test — wait for the bet. No Go code exists
++yet. The next step is to write the first failing test for the package `count`, from
++the specification.
+diff --git a/docs/spec/SPEC-0002-tally-architecture.md b/docs/spec/SPEC-0002-tally-architecture.md
+new file mode 100644
+index 0000000..27eab9f
+--- /dev/null
++++ b/docs/spec/SPEC-0002-tally-architecture.md
+@@ -0,0 +1,122 @@
++# SPEC-0002. The architecture of tally
++
++Date: 2026-10-22
++
++This document states how tally is built, to meet the behaviour that
++[SPEC-0001](SPEC-0001-tally.md) specifies for each requirement of
++[PRD-0001](../prd/PRD-0001-tally.md). It records seven decisions. For each one,
++options were filtered against the requirements, the facts, the invariants of
++[`guardrails.md`](../guardrails.md) and the records ADR-0001 to ADR-0009. A decision
++with one survivor is decided here and in its own ADR. A decision with more than one
++survivor is written as a section "Decision pending the bet": it lists the survivors
++and decides nothing, and the bet picks one. It builds nothing.
++
++## Decisions at a glance
++
++| Decision | Survivors of the filter | State | Record |
++| -------- | ----------------------- | ----- | ------ |
++| Build tool | `go-build-only` | Decided | [ADR-0011](../adr/0011-build-with-go-build-only.md) |
++| Module layout | `root-main-count-subpackage`, `cmd-tally-count-subpackage` | Pending the bet | [below](#module-layout) |
++| Count interface | `three-functions-teed-reader` | Decided | [ADR-0012](../adr/0012-count-with-three-functions-over-a-teed-reader.md) |
++| Flag parsing | `hand-written-parser` | Decided | [ADR-0013](../adr/0013-parse-flags-by-hand.md) |
++| Read strategy | `stream-fixed-buffer` | Decided | [ADR-0014](../adr/0014-stream-through-a-fixed-buffer.md) |
++| UTF-8 validation | `validate-in-stream-print-after-eof` | Decided | [ADR-0015](../adr/0015-validate-utf-8-in-the-stream.md) |
++| White-space class | `unicode-isspace`, `unicode-white-space-table` | Pending the bet | [below](#white-space-class) |
++
++The product records follow [ADR-0010](../adr/0010-record-product-architecture-decisions.md).
++
++## Build tool
++
++Decided: `go-build-only`. The Go toolchain alone builds and tests tally — `go build`
++for the binary, `go test` for the tests — with no build file of another tool. The
++module has no `require` directive and imports the standard library only.
++Rejected: `make-wrapper` fails NFR-020 and F-0003#3. Serves NFR-018, NFR-019 and
++NFR-020. ([ADR-0011](../adr/0011-build-with-go-build-only.md))
++
++## Module layout
++
++One Go module holds the package `main` of the command and a separate package
++`count` (NFR-021, Q-010). Where the package `main` sits in the module is not decided.
++Rejected: `single-main-package`, which puts the counting code in the package `main`,
++fails NFR-021 and Inv-7.
++
++### Decision pending the bet
++
++Two options survive the filter, and this document chooses neither:
++
++- `root-main-count-subpackage` — the package `main` at the root of the module, and
++  the package `count` in a subdirectory.
++- `cmd-tally-count-subpackage` — the package `main` under `cmd/tally`, and the
++  package `count` in a subdirectory.
++
++## Count interface
++
++Decided: `three-functions-teed-reader`. The package `count` exports three
++functions, one each for the lines (REQ-009), the words (REQ-010) and the characters
++(REQ-011), each over an `io.Reader`. The command reads each source once and feeds
++the same bytes to the three counts through a teed reader, so standard input, which
++cannot be read twice, is counted in one pass. Rejected:
++`three-functions-reread-source` fails REQ-008; `single-combined-function` fails
++NFR-021. Serves REQ-001, REQ-008 to REQ-011 and NFR-021.
++([ADR-0012](../adr/0012-count-with-three-functions-over-a-teed-reader.md))
++
++## Flag parsing
++
++Decided: `hand-written-parser`. The package `main` parses the command line itself:
++an argument that starts with `-` and has more letters is a set of the flags `l`, `w`
++and `c`, so `-lw` means `-l -w`; the argument `-` alone is a file name; any other
++letter or other wrong usage prints a usage message on standard error, counts
++nothing and exits with 2. With no flag, the three counts are selected; the counts
++always print in the order lines, words, characters. Rejected: `stdlib-flag-package`
++fails REQ-003 and Inv-1; `third-party-getopt` fails NFR-019 and F-0003#2. Serves
++REQ-002 to REQ-007 and REQ-012. ([ADR-0013](../adr/0013-parse-flags-by-hand.md))
++
++## Read strategy
++
++Decided: `stream-fixed-buffer`. Each file and standard input is read in pieces
++through one buffer of fixed size, and each piece is counted as it arrives; a code
++point split across two pieces is carried to the next. The heap the reading needs
++does not grow with the file. The size of the buffer is left unfrozen. Rejected:
++`read-whole-file` fails the peak-heap criterion (draft R-026). Serves the success
++metrics of time and peak heap. ([ADR-0014](../adr/0014-stream-through-a-fixed-buffer.md))
++
++## UTF-8 validation
++
++Decided: `validate-in-stream-print-after-eof`. The bytes are checked for valid
++UTF-8 as they stream through the buffer, and a file's row is printed only after its
++end is reached with no invalid sequence. On an invalid sequence, tally prints a
++message with the file name on standard error, prints no row, adds nothing to the
++total, goes on with the next file and exits with 1 at the end; rows already printed
++stay. A file that cannot be opened or read, a directory included, takes the same
++path with its reason (REQ-014, REQ-015). Rejected: `print-row-while-reading` fails
++Inv-3; `replace-invalid-with-fffd` fails NFR-023, F-0003#11 and Inv-3. Serves
++REQ-013 to REQ-017 and NFR-023.
++([ADR-0015](../adr/0015-validate-utf-8-in-the-stream.md))
++
++## White-space class
++
++A word is a run of code points that are not white space, and white space is every
++code point with the Unicode property `White_Space` (REQ-010). How the package
++`count` tests that property is not decided. Rejected: `ascii-whitespace-set`, which
++knows only the ASCII white space, fails REQ-010.
++
++### Decision pending the bet
++
++Two options survive the filter, and this document chooses neither:
++
++- `unicode-isspace` — test each code point with `unicode.IsSpace` of the standard
++  library.
++- `unicode-white-space-table` — test each code point against the table
++  `unicode.White_Space` of the standard library.
++
++## How the parts meet
++
++The package `main` parses the arguments (Flag parsing), then opens each named file
++in order, or reads standard input when no name is given. It streams each source
++through the fixed buffer (Read strategy), validating UTF-8 as it goes (UTF-8
++validation), and feeds the bytes once to the three count functions of the package
++`count` (Count interface), which use the white-space test of the White-space class.
++After a source ends valid, the package `main` prints its row with the selected
++counts in the fixed order, adds the counts to the total, and after the last source
++prints the total row when two names or more were given. It ends with the exit code
++2 on a usage error, 1 when any source failed, and 0 otherwise.
+diff --git a/docs/tasks/T-am8b.md b/docs/tasks/T-am8b.md
+new file mode 100644
+index 0000000..457b339
+--- /dev/null
++++ b/docs/tasks/T-am8b.md
+@@ -0,0 +1,87 @@
++# T-am8b — Write the architecture of tally
++
++| Field | Value |
++| ----- | ----- |
++| Task | `T-am8b` |
++| Issue | #6 |
++| Kind | architecture |
++| Size | large |
++| Requirements | REQ-001 to REQ-017, NFR-018 to NFR-024 |
++| Opened | 2026-10-22 |
++
++## Scope
++
++Write the architecture of tally from the options tables of its seven decisions and
++the survivors of their filter, with the revised draft of the requirements and its
++facts: the problem statement (F-0003), the marker answers
++([F-0002](../facts/F-0002-marker-answers.md)) and the idea owner's answers Q-001 to
++Q-014. A decision with one survivor is decided, in
++[SPEC-0002](../spec/SPEC-0002-tally-architecture.md) and in its own ADR. A decision
++with more than one survivor gets a section "Decision pending the bet" that lists its
++survivors and decides nothing. No Go code, no MoSCoW or Phase cell and no facts
++record is written. No new dependency.
++
++## Plan
++
++1. Resolve the record-placement condition of the plan review (R10):
++   [ADR-0010](../adr/0010-record-product-architecture-decisions.md) makes `docs/adr/`
++   the explicit home of the product's own architecture decisions, and the index of
++   [`adr/README.md`](../adr/README.md) and
++   [`engineering-discipline.md`](../engineering-discipline.md#architecture-decision-records)
++   say so in the same change.
++2. Write one ADR for each decision with one survivor:
++   [ADR-0011](../adr/0011-build-with-go-build-only.md) `go-build-only`,
++   [ADR-0012](../adr/0012-count-with-three-functions-over-a-teed-reader.md)
++   `three-functions-teed-reader`,
++   [ADR-0013](../adr/0013-parse-flags-by-hand.md) `hand-written-parser`,
++   [ADR-0014](../adr/0014-stream-through-a-fixed-buffer.md) `stream-fixed-buffer`,
++   [ADR-0015](../adr/0015-validate-utf-8-in-the-stream.md)
++   `validate-in-stream-print-after-eof`. Each names the options the filter rejected
++   and the constraint each one failed.
++3. Write [SPEC-0002](../spec/SPEC-0002-tally-architecture.md): one section per
++   decision, a section "Decision pending the bet" for the module layout
++   (`root-main-count-subpackage`, `cmd-tally-count-subpackage`) and for the
++   white-space class (`unicode-isspace`, `unicode-white-space-table`), and how the
++   parts meet.
++4. Update every document the change leaves stale: the project status and the repo
++   layout in [onboarding](../onboarding-for-engineers.md), the `SPEC` entry of the
++   [glossary](../glossary.md), and a gate pitfall in
++   [`guardrails.md`](../guardrails.md) for an architecture that chooses among
++   survivors.
++
++The plan review approved the plan with one condition (architecture and scope only),
++which step 1 resolves. The plan as reviewed chose `cmd-tally-count-subpackage` and
++`unicode-isspace` among their survivors; this step records neither choice, because
++a decision with more than one survivor waits for the bet. So it writes five ADRs,
++0011 to 0015, not seven, and the two pending decisions live in SPEC-0002 only. No
++build test is required at this step.
++
++## Definition of Done
++
++- [x] Each decision with one survivor is decided in SPEC-0002 and in one ADR that
++  names its rejected options and the constraints they failed.
++- [x] Each decision with more than one survivor has a section "Decision pending the
++  bet" that lists all its survivors and decides nothing; no ADR records it.
++- [x] No option that is not a survivor is written as decided or pending.
++- [x] The record-placement condition is resolved by ADR-0010, and the guidance it
++  touches is updated in the same change.
++- [x] No document is left stale; no file under `docs/facts/` is written.
++
++## Evidence
++
++- `sh docs/adr/adr-lint.sh` reports `adr-lint: OK`; its one warning, that nothing
++  outside `adr/` links ADR-0009, was there before this change.
++- `sh docs/links/link-lint.sh` reports `link-lint: OK`.
++- `sh docs/tests/run-discipline-tests.sh` reports 81 passed, 0 failed.
++- `git diff --check` reports nothing.
++
++## Verdict
++
++Pending the review rounds.
++
++## Resource record
++
++| Part | Expected tier | Model | Effort | Tokens | Elapsed |
++| ---- | ------------- | ----- | ------ | ------ | ------- |
++| The architecture and its records | reasoning | claude-opus-5-5 | not reported | not reported | not reported |
++| **Total** | | | | not reported | not reported |
