@@ -1,0 +1,3 @@
+kind	n	value	sha256	reason
+comment	1	result/plan-review.md	692f281a09aa1a907f4635a48d57dde442479b45005d98f3384e776a2608b327	—
+status	1	completed	—	Reviewed the specification plan against the supplied issue, requirements and rules; approved.
