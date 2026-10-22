@@ -1,0 +1,2 @@
+session	task	requirements	role	harness	model	billing	start	first_output	end	latency_s	duration_s	tokens_in	tokens_out	tokens_cache	tokens_status	tokens_reason	money	currency	money_status	price
+S-9b95d8f0	T-xbje	—	probe	claude	claude-sonnet-5-5	subscription	2026-10-22T14:42:22Z	2026-10-22T14:42:23Z	2026-10-22T14:42:31Z	1	9	4	339	41891	observed	—	—	—	unknown	—
