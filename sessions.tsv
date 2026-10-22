@@ -18,3 +18,4 @@ S-2409a878	T-yzst	1	qa-engineer	codex	codex-cli 0.163.0	gpt-6.1-sol	65bf23a4380a
 S-abc2007e	T-yzst	2	product-owner	claude	2.1.306 (Claude Code)	claude-opus-5-5	c04ec636470711d7a46dc2f3b672849be72dc16f	c8aa2c346a64e48d9499d3c954b0149554ae8e15	18256	4564	1000000	5.00	30	ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-sonnet-5-5	—
 S-002af095	T-yzst	2	qa-engineer	codex	codex-cli 0.163.0	gpt-6.1-sol	d03c8650303fbdff49986ef5478ed53d11219964	35e673f286d7530249f6cf4cc27b36ff713a04da	17211	4303	1050000	—	30	—	—
 S-7b0b85b1	T-am8b	1	software-engineer	claude	2.1.306 (Claude Code)	claude-opus-5-5	d03c8650303fbdff49986ef5478ed53d11219964	514ceead01f3da8cb7a897157f5e348559f10f55	17725	4432	1000000	5.00	30	ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-sonnet-5-5	—
+S-cbc711fa	T-am8b	1	qa-engineer	codex	codex-cli 0.163.0	gpt-6.1-sol	d03c8650303fbdff49986ef5478ed53d11219964	b561d19ecc5b07cb69fd14a920af1a4a32ddfba4	18321	4581	1050000	—	30	—	—
