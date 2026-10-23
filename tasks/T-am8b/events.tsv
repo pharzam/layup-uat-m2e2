@@ -35,3 +35,4 @@ n	kind	attempt	session	base	sha	detail	time
 34	handoff	4	S-a53fae9b	—	—	valid	2026-10-23T05:55:46Z
 35	session	4	S-39e41221	—	—	—	2026-10-23T05:56:06Z
 36	result	4	S-39e41221	—	—	done	2026-10-23T05:57:28Z
+37	handoff	4	S-39e41221	—	—	valid comment 6358499230-1	2026-10-23T05:57:36Z
