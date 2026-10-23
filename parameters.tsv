@@ -1,5 +1,5 @@
 name	value	default	bound	role	evidence	comment	since
-brief.lines	—	—	a whole number of lines, 1 or more	operator	—	—	2026-10-22T16:15:16Z
+brief.lines	110	—	a whole number of lines, 1 or more	operator	the Operator chose a 110-line brief on pharzam/layup#370	6351309814	2026-10-23T05:50:38Z
 build.parallel	—	—	a whole number of tasks, 1 or more	operator	—	—	2026-10-22T16:15:16Z
 transitions	—	—	the SHA-256 of a copied comment of the control issue whose whole body is a table that passes the check of a table: a row for each default pair, only the kinds and items of the lists, and no `schema` in the row of code's own handoff	operator	—	—	2026-10-22T16:15:16Z
 lease.H	10	—	whole minutes, 1 or more, as the flag `--lease-h`	operator	command	—	2026-10-22T16:15:16Z
