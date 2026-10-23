@@ -25,3 +25,4 @@ S-d9e5873f	T-am8b	2	qa-engineer	codex	codex-cli 0.163.0	gpt-6.1-sol	c17c28c8c9c3
 S-045c56f7	T-am8b	3	systems-architect	claude	2.1.306 (Claude Code)	claude-opus-5-5	d03c8650303fbdff49986ef5478ed53d11219964	e1820676c8c0fc33c6417c6fabd4c7ed5c1401c3	19292	4823	1000000	5.00	30	ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-sonnet-5-5	—
 S-0465b007	T-am8b	3	qa-engineer	codex	codex-cli 0.163.0	gpt-6.1-sol	0ebf7d9e0f4f91881cce4d1368c9e62826fcc98a	5b052aa1c6f38c2e814ad65c7d7a05df4700aa78	18496	4624	1050000	—	30	—	—
 S-a53fae9b	T-am8b	4	systems-architect	claude	2.1.306 (Claude Code)	claude-opus-5-5	d03c8650303fbdff49986ef5478ed53d11219964	6e0e77363153453ff6287591ea81478d327d47ca	19482	4871	1000000	5.00	30	ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-sonnet-5-5	—
+S-39e41221	T-am8b	4	qa-engineer	codex	codex-cli 0.163.0	gpt-6.1-sol	a14ecc47c4792eb6106cda07f970abacc1af373e	0f0dbf0a9f87fea556273f8fb93276171d7b7718	19945	4987	1050000	—	30	—	—
