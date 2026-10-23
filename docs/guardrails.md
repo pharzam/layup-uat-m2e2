@@ -203,6 +203,15 @@ success without having done its job.
   steps. These checks are a control against forgetting, not against an operator
   who edits the check.
 
+- ❌ **A PRD whose priorities wait for the bet.** The specification task writes
+  [PRD-0001](prd/PRD-0001-tally.md) with its MoSCoW and Phase cells empty, because
+  the first bet fills them; until then `sh docs/prd/prd-lint.sh` fails on every
+  requirement with `MoSCoW "" not in Must|Should|Could|Won't` and `has no phase
+  value`. It looks like a defect of the PRD, and the tempting fix — typing a guess
+  into the cells, or `—` — makes the check pass with priorities nobody decided.
+  **The check:** read the failures; while every one is of those two kinds and the
+  bet has not run, the PRD is as intended. Any other failure is a real defect.
+
 ### Testing pitfalls (project-wide — keep these)
 
 These traps are not domain-specific: they hurt every project's test suite, so the

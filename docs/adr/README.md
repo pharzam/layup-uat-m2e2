@@ -6,20 +6,27 @@ for the full rationale.
 
 ## What belongs in this directory
 
-`docs/adr/` is tally's **living constitution**: it holds only records that
-constitute *a project*, generic enough to carry onto any domain. Two
-rules keep it that way, and both are **written rules** — no linter enforces them
+`docs/adr/` is tally's **living constitution**. It holds two kinds of record. A
+**discipline record** (ADR-0001 to ADR-0009) constitutes *a project* and is generic
+enough to carry onto any domain. A **product record** (ADR-0010 onward) fixes one
+architecturally significant decision about tally itself — its build, its packages,
+its interfaces, how it reads and counts — and ADR-0010 is the decision that puts
+these records here. Two rules hold for both kinds, and both are **written rules** — no linter enforces them
 (`link-lint` checks that a link resolves, not which way it points; `adr-lint`
 reads only this directory), so the [plan review](../issue-workflow.md#r12--slice-and-prioritize)
 and the [decay rounds](../engineering-discipline.md#reviewing-until-findings-decay)
 are their enforcement:
 
 1. **A record here references no issue or pull request of this repository.** It
-   cites only sibling constitutive documents — another ADR, an
+   cites only in-tree documents — another ADR, an
    [`engineering-discipline.md`](../engineering-discipline.md) section,
    [`issue-workflow.md`](../issue-workflow.md), the [`glossary`](../glossary.md), a
-   record format. A forge number resolves to a different issue, or to nothing, in
-   another repository; a link to a sibling document travels with the copy.
+   record format, [`guardrails.md`](../guardrails.md) — and a product record also
+   cites the product's requirements and specifications under [`prd/`](../prd/) and
+   [`spec/`](../spec/), and its facts under [`facts/`](../facts/), which it must cite
+   to say which requirement it serves. A forge number resolves to a different
+   issue, or to nothing, in another repository; a link to an in-tree document
+   travels with the copy.
 2. **A record here never links into `docs/decisions/`** (a bare textual mention is
    the most it may make). That directory is this repository's own past governance
    decisions — the records that shaped *the baseline* rather than a project built with
@@ -30,7 +37,7 @@ are their enforcement:
    survives the deletion.)
 
 **Numbering.** `docs/adr/` is the single living ADR sequence, numbered
-contiguously from `0001`, and it grows — the next constitutional ADR is `0009`. A
+contiguously from `0001`, and it grows — the next ADR is `0016`. A
 bare "ADR-NNNN" means this directory's sequence. The archive under `docs/decisions/`
 has its **own namespace**: a prefixed, zero-based sequence `D-0000`–`D-0007` that
 shares no number with this one and is cited **by its `D-NNNN` identifier** — named
@@ -136,6 +143,12 @@ record by number here, and let the index table below do the linking.
 | [0007](0007-record-task-resource-use.md)        | Record each task's resource use | Accepted |
 | [0008](0008-require-one-reading-in-decision-driving-text.md) | Require one reading in decision-driving text | Accepted |
 | [0009](0009-pin-the-baseline.md) | Pin the baseline | Accepted |
+| [0010](0010-record-product-decisions-as-adrs.md) | Record tally's product decisions as ADRs | Accepted |
+| [0011](0011-build-with-go-build-only.md) | Build with go build only | Accepted |
+| [0012](0012-parse-flags-by-hand.md) | Parse the flags by hand | Accepted |
+| [0013](0013-stream-through-a-fixed-buffer.md) | Stream each file through a fixed buffer | Accepted |
+| [0014](0014-validate-utf8-in-the-stream.md) | Validate UTF-8 in the stream, print after the end | Accepted |
+| [0015](0015-count-with-three-functions-over-a-teed-reader.md) | Count with three functions over a teed reader | Accepted |
 
 <!-- Add one row per ADR as you write them. Keep the newest at the bottom. -->
 
