@@ -1,0 +1,11 @@
+kind	n	value	sha256	reason
+status	1	completed	—	Five single-survivor decisions recorded as ADR-0011 to ADR-0015, module layout and white space test written as Decision pending the bet in SPEC-0002, record placement resolved by ADR-0010 and adr/README.md; rule file docs/engineering-discipline.md (ADR section) left unchanged; plan revision awaits confirmation on issue 6
+artifact	1	docs/tasks/T-am8b.md	2b075fe45c0316db06b23abc219d1898f868de91bf7f95b8444353b84307cf31	—
+artifact	2	docs/spec/SPEC-0002-tally-architecture.md	8df8e94826cc510b4dab341106b9dbb53db27fb47cfad11e34f047def03dfa85	—
+artifact	3	docs/adr/README.md	4df1316a681cce639b222a357bf0bcdaf66c19134547732423e1fc8c30e42fd6	—
+artifact	4	docs/adr/0010-record-product-decisions-as-adrs.md	ef2021a4dfd048987cf8acb8c6372a2b58b876334db9531d1c0badb6e26b7319	—
+artifact	5	docs/adr/0011-build-with-go-build-only.md	02e81c0f9cc214b038ad2229064ae0d53a72d349ef85952c12ded92ae947c70d	—
+artifact	6	docs/adr/0012-parse-flags-by-hand.md	f049fc6f83964eb9cf812754d5b8f683c0e3ef8b4337aa4d374b5fbabf590bc7	—
+artifact	7	docs/adr/0013-stream-through-a-fixed-buffer.md	0beec0734485dd498261273a778366d5e2ece0ad2bedcfd210f2463806c0f4dd	—
+artifact	8	docs/adr/0014-validate-utf8-in-the-stream.md	92f0a0e2f47c727d9f3b88690863f36c401eafd9fa48a044834f5c2e5e6eb04c	—
+artifact	9	docs/adr/0015-count-with-three-functions-over-a-teed-reader.md	778e565397e2059c52238824aac3a97a68d60c54b5cb616e9f4f33c03c62ea38	—
