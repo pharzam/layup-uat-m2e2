@@ -32,3 +32,4 @@ n	kind	attempt	session	base	sha	detail	time
 31	result	4	S-a53fae9b	—	—	done	2026-10-23T05:55:37Z
 32	push	4	S-a53fae9b	—	a14ecc47c4792eb6106cda07f970abacc1af373e	task/T-am8b/4	2026-10-23T05:55:38Z
 33	bound	4	S-a53fae9b	—	a14ecc47c4792eb6106cda07f970abacc1af373e	task/T-am8b/4	2026-10-23T05:55:42Z
+34	handoff	4	S-a53fae9b	—	—	valid	2026-10-23T05:55:46Z
